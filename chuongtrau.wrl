@@ -1,0 +1,139 @@
+#VRML V2.0 utf8
+
+Viewpoint {
+	position 0 5 30
+}
+DEF	view Viewpoint {
+	position 10 5 0
+	orientation	0 1 0 1.57
+}	
+DEF chuongtrau Transform {
+	children [
+		Transform {
+			translation	10 5 10
+			children [
+				DEF cot Shape {
+					appearance DEF maugo Appearance {
+						material Material {
+							diffuseColor .278 .137 .0863
+							specularColor .31 .14 .27
+							ambientIntensity .04
+							shininess .161
+						}
+						texture	ImageTexture {
+							url	"images/maugolim.jpg"
+						}
+					}
+					geometry Cylinder {
+						radius 0.5
+						height 10
+						bottom TRUE
+						top	TRUE
+					}
+				}
+			]
+		}
+		Transform {
+			translation	10 5 -10
+			children USE cot
+		}
+		Transform {
+			translation	-10 5 10
+			children USE cot
+		}
+		Transform {
+			translation	-10 5 -10
+			children USE cot
+		}
+
+		Transform {
+			children [
+				Shape {
+					appearance DEF mauda Appearance {
+
+						texture	ImageTexture {
+							url	"images/gachda.jpg"
+						}
+					}
+					geometry Box {
+						size 22 0.1 22
+					}
+			
+				}
+		
+			]
+		}
+		Transform {
+			translation	0 10 0
+			children [
+				Shape {
+					appearance DEF maurom Appearance {
+						texture	ImageTexture {
+							url	"images/rom.png"
+						}
+					}
+					geometry Box{
+					   size 25 0.1 25
+					}
+				}
+			]
+		}
+		DEF rao Transform {
+			translation 10 2.5 0
+			rotation 0 0 1 1.57
+			children [
+				Shape {
+					  appearance USE maugo
+					  geometry Box {
+						size 5 0.1 20
+					  }
+	
+				}
+			]
+		}
+		Transform {
+			translation -20 0 0
+			children USE rao
+		}
+		Transform {
+			rotation 0 1 0 1.57
+			children USE rao
+		}
+		Transform {
+			translation	0 5.8 0
+			children [
+				DEF	trau Inline {
+					url"trauchay.wrl"
+					bboxCenter 0 0 0
+					bboxSize -1 -1 -1
+				}
+			]
+		}
+		DEF ma Script {
+			eventIn	SFBool turnOn
+			eventOut SFBool	on
+			field SFBool turn FALSE
+			url	"javascript:
+			function turnOn(val){
+				if(val){
+					turn=!turn;
+					on=turn;
+				}
+			}	
+			"
+		}
+		DEF	touch TouchSensor {
+			enabled	TRUE
+		}
+
+	]
+			
+ROUTE touch.isActive TO	ma.turnOn
+ROUTE ma.on	TO	view.set_bind
+}
+
+
+
+
+
+													  

@@ -1,0 +1,519 @@
+#VRML V2.0 utf8
+
+DEF	cay Transform {	 
+	children [
+		DEF canhchinh Transform {
+#			scale 0.85 0.85 0.85
+			children [
+				Shape
+				{
+			appearance Appearance {
+				material Material {
+					diffuseColor .8 .31 0
+					specularColor .5 .5 .5
+					emissiveColor .15 .06 0
+					ambientIntensity 0
+				}
+			}
+			geometry Extrusion {
+				crossSection [
+						1	0
+					0.92	0.38
+					0.71	0.71
+					0.38	0.92
+					0.00	1.00
+					-0.38	0.92
+					-0.71	0.71
+					-0.92	0.38
+					-1.00	0.00
+					-0.92	-0.38
+					-0.71	-0.71
+					-0.38	-0.92
+					0.00	-1.00
+					0.38	-0.92
+					0.71	-0.71
+					0.92	-0.39
+					1.00	0.00
+				]
+				spine [0 0 0,0 2.5 0,0 5 0,-0.5 6.3 0,-1 7 0,-1.7 7.6 0,-2.9 8 0]
+				scale [0.6 0.6,0.5 0.5,0.4 0.4,0.25 0.25,0.25 0.25,0.2 0.2,0.05 0.05]
+				creaseAngle	1
+				beginCap TRUE
+				endCap TRUE
+				solid   FALSE
+			}
+		}
+			DEF	la1 Transform {
+					translation	-2.9 8 0
+					children [
+						DEF lacay Transform	{ 
+							scale 1.1 1.1 1.1 
+							children [
+	    						Inline {
+										url ["lacay.wrl"]
+										bboxCenter 0 0 0
+										bboxSize -1 -1 -1
+									}
+									]
+					}
+				]
+			}
+
+			DEF	la2	Transform {
+				translation	-1.7 7.8 0
+				children [
+					USE	lacay
+				]
+			}
+			DEF	la3	Transform {
+				translation	-1 7.3 0
+				children [
+					USE	lacay
+				]
+			}
+			DEF	la4	Transform {
+				translation	-0.5 6.7 0
+				children [
+					USE	lacay
+				]
+			}
+			DEF	la11 Transform {
+				rotation 0 0 1 1.57
+				translation	-2.9 8 0
+				children [
+					USE	lacay
+				]
+			}
+
+			DEF	la12 Transform {
+				rotation 1 0 0 0.785
+				translation	-1.7 7.8 0
+				children [
+					USE	lacay
+				]
+			}
+			DEF	la13 Transform {
+				translation -0.5 6.9 0
+				rotation 1 0 0 1.57
+				children [
+					USE	lacay
+				]
+			}
+	]
+}
+
+	DEF	canhre Transform {
+			translation	0 5 0
+			children [
+				DEF	canh3 Transform	{
+					children [
+				  Shape {
+						appearance Appearance {
+							material Material {
+							diffuseColor .8 .31 0
+							specularColor .5 .5 .5
+							emissiveColor .15 .06 0
+							ambientIntensity 0
+				}
+			}
+			geometry Extrusion {
+				crossSection [
+						1	0
+					0.92	0.38
+					0.71	0.71
+					0.38	0.92
+					0.00	1.00
+					-0.38	0.92
+					-0.71	0.71
+					-0.92	0.38
+					-1.00	0.00
+					-0.92	-0.38
+					-0.71	-0.71
+					-0.38	-0.92
+					0.00	-1.00
+					0.38	-0.92
+					0.71	-0.71
+					0.92	-0.39
+					1.00	0.00
+				]
+				spine [0 0 0,0.7 0.7 0,1.3 1.3 0,2.6 2 0,4.3 2.5 0]
+				scale [0.3 0.3,0.3 0.3,0.25 0.25,0.2 0.2,0.05 0.05]
+				creaseAngle	1
+				beginCap TRUE
+				endCap TRUE
+				solid   FALSE
+			}
+			
+		
+		}
+	]
+}
+			DEF	la5	Transform {
+				translation	4.3 2.5 0
+				children [
+					USE	lacay
+				]
+			}
+			DEF	la6	Transform {
+				translation	2.6 2.1 0
+				children [
+					USE	lacay
+				]
+			}
+			DEF	la7	Transform {
+				translation	1.3 1.5 0
+				children [
+					USE	lacay
+				]
+			}
+			DEF	la14	Transform {
+				translation	4.3 2.5 0
+				rotation 0 0 1 -0.785
+				children [
+					USE	lacay
+				]
+			}
+			DEF	latong1 Transform {
+				children [
+			DEF	la15 Transform {
+				translation	2 5.7 0
+				children [
+					Inline {
+						url ["lacay.wrl"]
+						bboxCenter 0 0 0
+						bboxSize -1 -1 -1
+					}
+				]
+			}
+			DEF	la16 Transform {
+				translation	3 5.7 0
+				children [
+					Inline {
+						url ["lacay.wrl"]
+						bboxCenter 0 0 0
+						bboxSize -1 -1 -1
+					}
+				]
+			}
+			DEF	la17 Transform {
+				translation	2.5 5.5 0
+				children [
+					Inline {
+						url ["lacay.wrl"]
+						bboxCenter 0 0 0
+						bboxSize -1 -1 -1
+					}
+				]
+			}
+			DEF	la18 Transform {
+				translation	1.5 5.7 0.5
+				children [
+					Inline {
+						url ["lacay.wrl"]
+						bboxCenter 0 0 0
+						bboxSize -1 -1 -1
+					}
+				]
+			}
+		]
+	}
+	DEF	latong2	Transform {
+		children [
+			DEF	la19 Transform {
+				translation	2 4.5 0
+				children [
+					Inline {
+						url ["lacay.wrl"]
+						bboxCenter 0 0 0
+						bboxSize -1 -1 -1
+					}
+				]
+			}
+			DEF	la20 Transform {
+				translation	1.5 4.5 0
+				children [
+					Inline {
+						url ["lacay.wrl"]
+						bboxCenter 0 0 0
+						bboxSize -1 -1 -1
+					}
+				]
+			}
+			DEF	la21 Transform {
+				translation	1 4.5 0
+				children [
+					Inline {
+						url ["lacay.wrl"]
+						bboxCenter 0 0 0
+						bboxSize -1 -1 -1
+					}
+				]
+			}
+			DEF	la22 Transform {
+				translation	1 4 -1
+				children [
+					Inline {
+						url ["lacay.wrl"]
+						bboxCenter 0 0 0
+						bboxSize -1 -1 -1
+					}
+				]
+			}DEF	la23 Transform {
+				translation	1 4.2 -0.5
+				children [
+					Inline {
+						url ["lacay.wrl"]
+						bboxCenter 0 0 0
+						bboxSize -1 -1 -1
+					}
+				]
+			}
+			DEF	la24 Transform {
+				translation	1.2 4.5 -0.5
+				children [
+					Inline {
+						url ["lacay.wrl"]
+						bboxCenter 0 0 0
+						bboxSize -1 -1 -1
+					}
+				]
+			}
+		]
+	}
+	DEF	latong3	Transform {
+		translation	-2 0 0
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong4	Transform {
+		translation	-2 -2 0
+		children [
+			USE	latong1
+		]
+	}
+
+	DEF	latong5	Transform {
+		translation	-1.5 -2 0
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong6	Transform {
+		translation	-2 -3 0
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong7	Transform {
+		rotation 0 1 0 1.57
+		translation	-1 -4 0
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong8	Transform {
+		translation	1 -4 0
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong9	Transform {
+		translation	1 -4 -1
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong10	Transform {
+		translation	0 -4 1
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong11	Transform {
+		translation	0 -3.5 1
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong12	Transform {
+		translation	-2 -4 0
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong13	Transform {
+		translation	-2 -4 -1
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong14	Transform {
+		translation	-3 -4 0
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong15	Transform {
+		translation	-4 -4 0
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong16	Transform {
+		translation	-4 -3 0
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong21 Transform {
+		translation	1 -1 0
+		children [
+			USE	latong1
+		]
+	}
+	DEF	latong17 Transform {
+		translation	-1 0 0
+		children [
+			USE	latong2
+		]
+	}
+	DEF	latong18 Transform {
+		translation	-1 0 0
+		rotation 0 1 0 0.785
+		children [
+			USE	latong2
+		]
+	}
+	DEF	latong19 Transform {
+		translation	-1 -1 0
+		children [
+			USE	latong2
+		]
+	}
+	DEF	latong20 Transform {
+		translation	-1 0 -0.5
+		children [
+			USE	latong2
+		]
+	}
+		]
+		}
+
+			DEF	canh2 Transform	{
+				translation	2 6.6 0
+				children [
+					DEF	canh2_1 Transform {
+						children [
+					Shape {
+						appearance Appearance {
+							material Material {
+								   diffuseColor .8 .31 0
+							specularColor .5 .5 .5
+							emissiveColor .15 .06 0
+							ambientIntensity 0
+							}
+						}
+						geometry Extrusion {
+							crossSection [
+								1	0
+								0.92	0.38
+								0.71	0.71
+								0.38	0.92
+								0.00	1.00
+								-0.38	0.92
+								-0.71	0.71
+								-0.92	0.38
+								-1.00	0.00
+								-0.92	-0.38
+								-0.71	-0.71
+								-0.38	-0.92
+								0.00	-1.00
+								0.38	-0.92
+								0.71	-0.71
+								0.92	-0.39
+								1.00	0.00
+							]
+							spine [0 0 0,0.2 0.5 0.5,0.3 1 1,0.3 1.3 1.3]
+							scale [0.2 0.15,0.15 0.15,0.1 0.1,0.05 0.05]
+							creaseAngle	1
+							beginCap TRUE
+							endCap TRUE
+							solid   FALSE
+						}
+					}
+				]
+				}
+
+					DEF	la8	Transform {
+						translation	0.3 1.4 1.3
+						children [
+							USE	lacay
+						]
+					}
+
+					DEF	la9	Transform {
+						translation	0.3 1.1 1
+						children [
+							USE	lacay
+						]
+					}
+
+					DEF	la10	Transform {
+						translation	0.2 0.6 0.5
+						children [
+							USE	lacay
+						]
+					}
+					DEF	latong22  Transform {
+						translation	0.3 1.4 1.3
+						rotation 1 0 0 1.57
+						children [
+							USE	lacay
+						]
+					}
+				]
+
+			}
+
+DEF	canhcay1 Transform {
+	rotation 0 1 0 0.785
+	children [
+		USE	canhre
+	]
+}
+DEF	canhcay2 Transform {
+	scale 0.5 2.5 0.5
+	translation	0 5 0
+	children [
+		USE	canh3
+	]
+}
+DEF	canhcay3 Transform {
+	rotation 0 1 0 -1.57
+	translation	0.65 8 -0.1
+	children [
+		USE	canh2_1
+	]
+}
+ DEF anhcay4 Transform {
+	rotation 0 1 0 -2.335
+	translation	1 9 -0.1
+	children [
+		USE	canh2_1
+	]
+} 
+ DEF anhcay5 Transform {
+	rotation 0 1 0 3.14
+	translation	1.3 10 -0.1
+	children [
+		USE	canh2_1
+	]
+}
+]
+}
+
+
+
+
+

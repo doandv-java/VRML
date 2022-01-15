@@ -1,0 +1,72 @@
+#VRML V2.0 utf8
+
+DEF tu Transform {
+
+	children [
+		DEF matben Shape {
+			appearance DEF mau Appearance {
+				material Material {
+					diffuseColor .88 .15 .01
+					specularColor .19 .03 .03
+					ambientIntensity .0833
+					shininess .08
+				}
+		
+			}
+			geometry  Box {
+				size 0.1 5 2
+			}
+		}
+		Transform {
+			translation	5 0 0
+			children USE matben
+		}
+
+		Transform {
+			translation	2.5 2.45 0
+			children [
+				DEF mattren Shape {
+					  appearance USE mau
+					  geometry Box {
+						size 5 0.1 2
+					  }
+				}
+			]
+		}
+		Transform {
+			translation	2.5 -2.45 0
+			children USE mattren 
+		}
+
+		Transform {
+			translation	2.5 0 -0.95
+			children [
+				DEF matsau Shape {
+					appearance USE mau
+					geometry Box {
+						size 5 5 0.1
+					}
+
+				}
+			]
+		}
+		DEF cua Transform {
+			center 0 0 0.95
+			children [
+				Transform {
+					translation	2.5 0 0.95
+					children USE matsau
+				}
+				DEF cylinder CylinderSensor {
+					enabled TRUE
+					offset 0
+					autoOffset TRUE
+					maxAngle 0
+					minAngle -1.59
+					diskAngle 0.262
+				}
+			]
+			ROUTE cylinder.rotation_changed	TO cua.rotation
+		}
+	]
+}

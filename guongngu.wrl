@@ -1,0 +1,57 @@
+#VRML V2.0 utf8
+
+#guong ngu
+
+Transform {
+
+	children [
+		Shape {
+			appearance DEF maugo Appearance {
+				texture	ImageTexture {
+					url	"file:///C:/Users/Duong Doan/Desktop/BTL/Thuctaiao/images/maugolim.jpg"
+				}
+			}	
+			geometry Extrusion {
+				crossSection [
+					4 5
+					4 -5
+					-4 -5
+					-4 5
+					4 5
+				]
+				spine [0 0 0,0 2 0,0 2 0,0 1.95 0]
+				scale [1 1,1 1,0.9 0.9,0.9 0.9]
+				solid FALSE
+				beginCap FALSE
+				endCap TRUE
+				creaseAngle	1
+			}
+		}
+		Transform {
+			translation	3.5 0.45 4.5
+			children [
+				DEF cotguong Shape {
+					appearance USE maugo
+					geometry Box {
+						size 0.5 3 0.5
+					}
+				}
+			]
+		}
+		Transform {
+			translation	3.5 0.45 -4.5
+			children USE cotguong
+
+		}
+		Transform {
+			translation	-3.5 0.45 -4.5
+			children USE cotguong
+
+		}
+		Transform {
+			translation	-3.5 0.45 4.5
+			children USE cotguong
+
+		}
+	]
+}

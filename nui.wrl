@@ -1,0 +1,37 @@
+#VRML V2.0 utf8
+
+Transform {
+	children [
+		DEF nui Shape{
+			appearance Appearance {
+				material Material {
+				}
+				texture	ImageTexture {
+					repeatS	TRUE
+					repeatT	TRUE
+					url "images/anhco.jpg"
+				}
+			}
+			geometry ElevationGrid {
+				solid TRUE
+				xDimension 9
+				zDimension 9
+				xSpacing 1.0
+				zSpacing 1.0
+				height [
+					0	0	0	0	0	0	0	0	0
+					0	1	2.5	2	2.5	2	1.5	1	0
+					0	2	4.5	6.5	6	5	3	2.5	0
+					0	1	6.5	8.5	9	8	4	1.75	0
+					0	2	6	8	9	7.5	5	2	0
+					0	2.25	4	7	6	7	3	1.5	0
+					0	1.5	1.75	5	4	5.5	2.75	1	0
+					0	1	1	2.5	2	2.5	2.5	1	0
+					0	0	0	0	0	0	0	0	0
+
+				]
+			}
+
+		}
+	]
+}

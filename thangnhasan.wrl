@@ -1,0 +1,65 @@
+#VRML V2.0 utf8
+
+#Cai thang nha
+Transform {
+	children [
+		DEF	matben Transform {
+			children [
+				Shape {
+
+					appearance DEF	mau Appearance {
+						texture ImageTexture {
+							url	"images/maugolim.jpg"
+						}
+					}
+					geometry Extrusion {
+						crossSection [
+							0 0
+							1 0
+							6 6
+							5 6
+							0 0
+						]
+						spine [0 0 0,0.3 0 0]
+						scale [1 1, 1 1]
+						solid FALSE
+						beginCap TRUE
+						endCap TRUE
+						creaseAngle	0
+					}
+				}
+
+			]
+
+		}
+		DEF thanhngang Transform {
+			translation	-2 -1 0.6
+			children [
+				Shape {
+					appearance USE mau
+					geometry Box{
+						size 4 0.2 1
+					}
+				}
+			]
+		}
+		Transform {
+			translation	0 -1 1.2
+			children USE thanhngang
+
+		}
+		Transform {
+			translation 0 -2 2.4
+			children USE thanhngang
+		}
+		Transform {
+			translation	0 -3 3.6
+			children USE thanhngang
+
+		}
+		Transform {
+			translation	 -4.2 0 0
+			children USE matben
+		}
+	]
+}

@@ -1,0 +1,520 @@
+#VRML V2.0 utf8
+DEF	buichuoi Transform {
+	children [
+			DEF	caychuoi Transform {
+				children [
+					DEF	kobichuoi Transform	{
+						children [
+							DEF	thanchuoi Transform {
+								children [
+									Shape {
+										appearance Appearance {
+											material Material {
+												diffuseColor 0 .49 0
+												specularColor .5 .5 .5
+												emissiveColor 0 .15 0
+												ambientIntensity 0
+											}
+										}
+										geometry Extrusion {
+											crossSection [
+													1	0
+													0.98	0.19
+													0.92	0.38
+													0.83	0.56
+													0.71	0.71
+													0.56	0.83
+													0.38	0.92
+													0.20	0.98
+													0.00	1.00
+													-0.19	0.98
+													-0.38	0.92
+													-0.55	0.83
+													-0.71	0.71
+													-0.83	0.56
+													-0.92	0.38
+													-0.98	0.20
+													-1.00	0.00
+													-0.98	-0.19
+													-0.92	-0.38
+													-0.83	-0.55
+													-0.71	-0.71
+													-0.56	-0.83
+													-0.38	-0.92
+													-0.20	-0.98
+													0.00	-1.00
+													0.19	-0.98
+													0.38	-0.92
+													0.55	-0.83
+													0.71	-0.71
+													0.83	-0.56
+													0.92	-0.39
+													0.98	-0.20
+													1.00	0.00	
+											]
+											spine [0 0 0,0 2 0,0 3 0]
+											scale [0.2 0.2,0.15 0.15,0.1 0.1]
+											creaseAngle	1
+											endCap TRUE
+											beginCap TRUE
+											solid FALSE
+										}
+									}							
+								]
+							}
+							DEF	canhchuoi Transform	{
+								translation	0 2.5 0
+								children [
+									DEF	than Transform {
+										scale 0.2 0.25 0.25
+										children [
+												Shape {
+													appearance Appearance {
+														material Material {
+															diffuseColor .12 .6 0
+															specularColor .5 .5 .5
+															emissiveColor .03 .14 0
+															ambientIntensity 0
+														}
+													}
+													geometry Extrusion {
+														crossSection [
+														-0.71	0.71
+														0 0
+														-0.38	-0.92
+														0.00	-1.00
+														0.38	-0.92
+														0.71	-0.71
+														0.92	-0.39
+														1	0
+														0.92	0.38
+														0.71	0.71
+														0.38	0.92
+														0.00	1.00
+														-0.38	0.92
+														-0.71	0.71
+													]
+														spine [0 0 0,0 0.5 -0.9,0 0.8 -1.4,0 1 -1.9,0 1.2 -2.4,0 1.3 -2.9,0 1.35 -3.9,0 1.3 -4.4,0 1.2 -4.9,0 1 -5.4,0 0.6 -5.9]
+														scale [0.6 0.6,0.3 0.3,0.3 0.3,0.3 0.3,0.3 0.3,0.3 0.3,0.25 0.25,0.2 0.2,0.2 0.2,0.15 0.15,0.05 0.05]
+														creaseAngle	1
+														endCap TRUE
+														beginCap TRUE
+														solid FALSE
+													}
+												}
+											]
+										}
+									DEF	la Transform	{
+										scale 0.25 0.25 0.25
+										children [
+											Shape {
+												appearance DEF maula Appearance {
+												   texture ImageTexture {
+												url "images/lachuoi.jpg"
+												repeatS TRUE
+												repeatT TRUE
+												}
+											}
+												geometry Extrusion {
+													crossSection [
+													1	0
+													0.98	0.19
+													0.92	0.38
+													0.83	0.56
+													0.71	0.71
+													0.56	0.83
+													0.38	0.92
+													0.20	0.98
+													0.00	1.00
+													-0.19	0.98
+													-0.38	0.92
+													-0.55	0.83
+													-0.71	0.71
+													-0.83	0.56
+													-0.92	0.38
+													-0.98	0.20
+													-1.00	0.00
+													-0.98	-0.19
+													-0.92	-0.38
+													-0.83	-0.55
+													-0.71	-0.71
+													-0.56	-0.83
+													-0.38	-0.92
+													-0.20	-0.98
+													0.00	-1.00
+													0.19	-0.98
+													0.38	-0.92
+													0.55	-0.83
+													0.71	-0.71
+													0.83	-0.56
+													0.92	-0.39
+													0.98	-0.20
+													1.00	0.00
+													]
+													spine [0 0.8 -1.4,0 1 -1.9,0 1.2 -2.4,0 1.3 -2.9,0 1.35 -3.9,0 1.3 -4.4,0 1.2 -4.9,0 1 -5.4,0 0.6 -5.9]
+													scale [0.05 0.5,0.05 1.5,0.05 1.5,0.05 1.3,0.05 1.5,0.05 1.4,0.05 1.5,0.05 1.4,0.05 0.5]
+													creaseAngle	1
+													endCap TRUE
+													beginCap TRUE
+													solid FALSE
+												}
+											}
+										]
+									}
+								]
+							}
+							DEF	canhchuoi1 Transform {
+								translation	0 0.2 0
+								scale 1 1 1.25
+								rotation 0 1 0 1.57
+								children [
+									USE	canhchuoi
+								]
+							}
+							DEF	canhchuoi2 Transform {
+								translation	0 0.4 0
+								rotation 0 1 0 -1.96
+								children [
+									USE	canhchuoi
+								]
+							}
+							DEF	canhchuoi3 Transform {
+								translation	0 0.1 0
+								rotation 0 1 0 -0.785
+								children [
+									USE	canhchuoi2
+								]
+							}
+							DEF	canhchuoi4 Transform {
+								translation	0 0.1 0
+								rotation 0 1 0 -1.57
+								children [
+									USE	canhchuoi3
+								]
+							}
+							DEF	ngon Transform {
+								translation	0 3 0
+								children [
+									Shape {
+										appearance Appearance {
+											material Material {
+												diffuseColor .48 .8 0
+												specularColor .5 .5 .5
+												emissiveColor .09 .15 0
+												ambientIntensity 0
+											}
+										}
+										geometry Extrusion {
+											crossSection [
+												1	0
+												0.92	0.38
+												0.71	0.71
+												0.38	0.92
+												0.00	1.00
+												-0.38	0.92
+												-0.71	0.71
+												-0.92	0.38
+												-1.00	0.00
+												-0.92	-0.38
+												-0.71	-0.71
+												-0.38	-0.92
+												0.00	-1.00
+												0.38	-0.92
+												0.71	-0.71
+												0.92	-0.39
+												1.00	0.00
+											]
+											spine [0 0 0,0 0.5 0,0.1 1 0]
+											scale [0.075 0.075,0.1 0.1,0.12 0.12]
+											creaseAngle	1
+											endCap FALSE
+											beginCap TRUE
+											solid FALSE
+												}
+											}
+								]
+							}
+							DEF	bocngoai Transform	{
+										translation	0 0 0.05
+					#					rotation 0 1 0 0.785
+										children [
+											Shape {
+												 appearance Appearance {
+													material Material {
+														diffuseColor .8 .8 0
+														specularColor .5 .5 .5
+														emissiveColor .15 .15 0
+														ambientIntensity 0
+													}
+												}
+												geometry Extrusion {
+													crossSection [
+														1	0
+														0.92	0.38
+														0.71	0.71
+														0.38	0.92
+														0.00	1.00
+														-0.38	0.92
+														-0.71	0.71
+														-0.92	0.38
+														-1.00	0.00
+														1 0
+													]
+													spine [0 0 0,0 1 0,0 2.5 0]
+													scale [0.2 0.2,0.15 0.15,0.01 0.01]
+													creaseAngle	1
+													endCap TRUE
+													beginCap FALSE
+													solid FALSE
+														}																  
+											}
+										]
+									}
+								]
+							}
+		
+
+				DEF	bichuoi Transform {
+							translation	0 2.8 0
+							scale 0.85 1 0.85
+							children [
+								DEF	cuong Transform	{
+									children [
+										 Shape {
+											appearance USE maula 
+											geometry Extrusion {
+												crossSection [
+													1	0
+													0.92	0.38
+													0.71	0.71
+													0.38	0.92
+													0.00	1.00
+													-0.38	0.92
+													-0.71	0.71
+													-0.92	0.38
+													-1.00	0.00
+													-0.92	-0.38
+													-0.71	-0.71
+													-0.38	-0.92
+													0.00	-1.00
+													0.38	-0.92
+													0.71	-0.71
+													0.92	-0.39
+													1.00	0.00
+												]
+												spine [0 0 0,0.2 -0.18 0,0.3 -0.25 0,0.35 -0.35 0]
+												scale [0.025 0.025,0.025 0.025,0.025 0.025,0.025 0.025]
+												creaseAngle	1
+												endCap TRUE
+												beginCap TRUE
+												solid FALSE
+													}
+												}
+									]
+								}
+								DEF	bongchuoi Transform	{
+									translation	0.35 -0.35 0 
+									scale 0.65 0.65 0.65
+									children [
+										Shape {
+											 appearance DEF maubichuoi Appearance {
+												texture ImageTexture {
+												url "images/bichuoi.jpg"
+												repeatS TRUE
+												repeatT TRUE
+											}
+										}
+											geometry Extrusion {
+												crossSection [
+													1	0
+													0.92	0.38
+													0.71	0.71
+													0.38	0.92
+													0.00	1.00
+													-0.38	0.92
+													-0.71	0.71
+													-0.92	0.38
+													-1.00	0.00
+													-0.92	-0.38
+													-0.71	-0.71
+													-0.38	-0.92
+													0.00	-1.00
+													0.38	-0.92
+													0.71	-0.71
+													0.92	-0.39
+													1.00	0.00
+												]
+												spine [0 0 0,0 -0.1 0,0 -0.2 0,0 -0.3 0,0 -0.4 0,0 -0.5 0,0 -0.6 0,0 -0.7 0,0 -0.8 0,0 -0.9 0,0 -1 0]
+												scale [0.05 0.05,0.1 0.1,0.2 0.2,0.225 0.225,0.25 0.25,0.25 0.25,0.225 0.225,0.2 0.2,0.15 0.15,0.075 0.075,0.01 0.01]
+												creaseAngle	1
+												endCap TRUE
+												beginCap TRUE
+												solid FALSE
+													}																  
+										}
+									]
+								}
+							DEF	bongchuoi1 Transform	{
+								translation	0.35 -0.35 0 
+								scale 0.65 0.65 0.65
+								rotation 0 0 1 0.785
+								children [
+									Shape {
+										appearance USE maubichuoi
+
+										geometry Extrusion {
+											crossSection [
+												1	0
+												0.92	0.38
+												0.71	0.71
+												0.38	0.92
+												0.00	1.00
+												-0.38	0.92
+												-0.71	0.71
+												-0.92	0.38
+												-1.00	0.00
+												-0.92	-0.38
+												-0.71	-0.71
+												-0.38	-0.92
+												0.00	-1.00
+												0.38	-0.92
+												0.71	-0.71
+												0.92	-0.39
+												1.00	0.00
+											]
+											spine [0 0 0,0 -0.1 0,0 -0.2 0,0 -0.3 0,0 -0.4 0,0 -0.5 0,0 -0.6 0,0 -0.7 0,0 -0.8 0,0 -0.9 0,0 -1 0]
+											scale [0.01 0.05,0.01 0.1,0.01 0.2,0.01 0.225,0.01 0.25,0.01 0.25,0.01 0.225,0.01 0.2,0.01 0.125,0.01 0.075,0.01 0.01]
+											creaseAngle	1
+											endCap TRUE
+											beginCap TRUE
+											solid FALSE
+												}																  
+									}
+								]
+							}
+							DEF	touch1 TouchSensor {enabled TRUE }
+							DEF	time1 TimeSensor {
+								cycleInterval 5
+								loop FALSE
+								enabled	FALSE
+							}
+							DEF	orient OrientationInterpolator {
+								key[0 0.25 0.5 0.75 1]
+								keyValue [0 0 1 0,0 0 1 -0.3925,0 0 1 -0.785,0 0 1 -1.1775,0 0 1 -1.57]
+							}
+							DEF	posit1 PositionInterpolator	{
+								key[0 0.25 0.5 0.75 1]
+								keyValue [0 2.8 0,0.35 2.1 0,0.7 1.4 0,1.2 0.7 0,1.5 0.5 0]
+							}
+						]
+					}
+				]
+			}
+
+			DEF	 caychuoi1 Transform {
+				rotation 0 1 0 1.3
+				translation	1 0 0.5
+				scale 0.65 0.65 0.65
+				children [
+					USE	kobichuoi
+				]
+
+			}
+			DEF	caychuoi2 Transform	{
+				rotation 0 1 0 -0.3925
+				translation	-0.75 0 0
+				scale 0.65 0.65 0.65
+				children [
+					USE	kobichuoi
+				]
+
+			}
+			DEF	caychuoi3 Transform	{
+				translation	0.3 0 0.5
+				scale 0.4 0.4 0.4
+#				rotation  0 1 0 0.3925
+				children [
+					USE	kobichuoi
+				]
+			}
+
+						DEF	de Transform {
+
+							children [
+								Shape {
+										 appearance Appearance {
+											material Material {
+												diffuseColor .8 .47 0
+												specularColor .5 .5 .5
+												emissiveColor .14 .08 0
+												ambientIntensity 0
+											}
+										}
+										geometry Extrusion {
+											crossSection [
+												1	0
+												0.92	0.38
+												0.71	0.71
+												0.38	0.92
+												0.00	1.00
+												-0.38	0.92
+												-0.71	0.71
+												-0.92	0.38
+												-1.00	0.00
+												-0.92	-0.38
+												-0.71	-0.71
+												-0.38	-0.92
+												0.00	-1.00
+												0.38	-0.92
+												0.71	-0.71
+												0.92	-0.39
+												1.00	0.00
+											]
+											spine [0 -0.01 0,0 0.01 0]
+											scale [3 2.5,3 2.5]
+											creaseAngle	1
+											endCap TRUE
+											beginCap TRUE
+											solid FALSE
+												}																  
+									}		
+							]
+						}
+	]
+}
+
+DEF	ma Script {
+	eventIn SFBool turnOn
+	eventOut SFBool On
+	eventOut SFBool Off
+	field SFBool turn FALSE
+	url "javascript:
+					function turnOn(val){
+								if(val){
+								turn = !turn;
+								if(turn)
+								{
+								On= TRUE;
+                        		Off=FALSE;
+            					}
+								else
+        						{
+									On=FALSE;
+									Off=TRUE;
+    							}
+
+            					}
+
+    								}
+
+    "
+}
+
+ROUTE touch1.isActive TO	ma.turnOn
+ROUTE ma.On	TO time1.enabled
+ROUTE time1.fraction_changed TO	posit1.set_fraction
+ROUTE posit1.value_changed TO bichuoi.translation
+ROUTE time1.fraction_changed TO	orient.set_fraction
+ROUTE orient.value_changed TO bichuoi.rotation
+
+ ROUTE touch1.touchTime TO time1.startTime

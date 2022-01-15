@@ -1,0 +1,54 @@
+#VRML V2.0 utf8
+
+DEF congchieng Shape {
+	appearance Appearance {
+		texture	ImageTexture {
+			repeatS	TRUE
+			repeatT	TRUE
+			url"file:///C:/Users/Duong Doan/Desktop/BTL/Thuctaiao/images/maucongchieng.png"
+		}
+	}
+	geometry Extrusion {
+		beginCap TRUE
+		endCap FALSE
+		creaseAngle	0
+		solid FALSE
+		crossSection [
+			1.00	0.00
+			0.98	0.20
+			0.92	0.38
+			0.83	0.56
+			0.71	0.71
+			0.56	0.83
+			0.38	0.92
+			0.20	0.98
+			0.00	1.00
+			-0.20	0.98
+			-0.38	0.92
+			-0.56	0.83
+			-0.71	0.71
+			-0.83	0.56
+			-0.92	0.38
+			-0.98	0.20
+			-1.00	0.00
+			-0.98	-0.20
+			-0.92	-0.38
+			-0.83	-0.56
+			-0.71	-0.71
+			-0.56	-0.83
+			-0.38	-0.92
+			-0.20	-0.98
+			0.00	-1.00
+			0.20	-0.98
+			0.38	-0.92
+			0.56	-0.83
+			0.71	-0.71
+			0.83	-0.56
+			0.92	-0.38
+			0.98	-0.20
+			1.00	0.00
+		]
+		spine [0 0.6 0,0 0.55 0, 0 0.5 0,0 0.6 0,0 0.55 0,0 0.5 0,0 0.5 0,0 0.55 0,0 0 0]
+		scale [0 0, 0.2 0.2, 0.3 0.3,0.7 0.7,0.75 0.75,0.8 0.8,1.45 1.45,1.5 1.5,1.5 1.5]
+	}
+}

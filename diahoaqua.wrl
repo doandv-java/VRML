@@ -1,0 +1,291 @@
+#VRML V2.0 utf8
+
+
+DEF quakhe Transform {
+	scale 0.2 0.2 0.2
+	rotation 0 0 1 1.2
+	translation	0 0.2 0
+	children [
+	Shape {
+	appearance Appearance {
+		material Material {
+			diffuseColor 0 .49 0
+			specularColor .5 .5 .5
+			emissiveColor 0 .15 0
+			ambientIntensity 0
+		}
+	}
+	geometry Extrusion {
+		crossSection [
+			0 1.1
+			-0.22 0.3
+			-1 0.3
+			-1 0.3
+			-0.4 -0.4
+			-0.6 -1.1
+			0 -0.6
+			0.6 -1.1
+			0.4 -0.3
+			1 0.3
+			0.22 0.3
+			0 1.1
+		]
+		
+		spine [0 0 0, 0 1 0,0 2.5 0, 0 3.5 0,0 4 0]
+		 scale [0.1 0.1,1 1, 1.5 1.5 ,1 1,0.1 0.1]
+		creaseAngle	1
+    		beginCap  TRUE
+    		endCap    TRUE
+    		solid   FALSE
+	}
+}
+
+DEF	cuong Transform	{
+	translation	0 3.8 0
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor .75 .3 0
+					specularColor .84 .84 .84
+					emissiveColor .1 .04 0
+					ambientIntensity .0867
+					shininess .92
+				}
+			}
+			geometry Extrusion {
+				crossSection [
+					1	0
+					0.92	0.38
+					0.71	0.71
+					0.38	0.92
+					0.00	1.00
+					-0.38	0.92
+					-0.71	0.71
+					-0.92	0.38
+					-1.00	0.00
+					-0.92	-0.38
+					-0.71	-0.71
+					-0.38	-0.92
+					0.00	-1.00
+					0.38	-0.92
+					0.71	-0.71
+					0.92	-0.39
+					1.00	0.00
+				]
+
+				spine [0 0 0,0 0.3 0,-0.1 0.5 0,-0.5 0.55 0,-0.7 0.5 0]
+				scale [0.05 0.05,0.05 0.05,0.08 0.08]
+				creaseAngle	1
+    			beginCap  TRUE
+    			endCap    TRUE
+    			solid   FALSE
+			}
+		}
+	]
+}
+]
+}
+DEF QuaTao Transform {
+	scale 0.15 0.15 0.15
+	translation	0.5 0 -0.3
+	children [
+		Shape {
+			appearance		  Appearance {
+				material Material {
+					diffuseColor	  1 0 0}
+				}
+				geometry	Extrusion {
+					crossSection  [
+						1 0, 0.87 -0.5, 0.5 -0.87,
+						0 -1, -0.5 -0.87, -0.87 -0.5,
+						-1 0, -0.87 0.5, -0.5 0.87,
+						0 1, 0.5 0.87,0.87 0.5,
+						1 0
+					]
+					spine [	0 0.4 0,	 0 0.25 0,	0 0 0,	0 0 0,	 0 0.5 0,  0 1.2 0,	 0 2 0, 	0 2.5 0,	0 3 0, 0 3.5 0, 
+						0 4 0, 0 4 0 0 3.5 0, 0 3 0]
+					scale [ 0 0,		0.6 0.6,	.8 .8,	1.3 1.3, 2 2,		2.4 2.4, 2.6 2.6, 2.7 2.7,		2.7 2.7, 2.5 2.5, 
+						2 2, 1.5 1.5, 1 1, 0.05 0.05]  
+					solid FALSE
+					creaseAngle 1
+					beginCap	TRUE
+					endCap TRUE
+				}
+			}
+			  #cangtao
+			Shape {
+				appearance Appearance {
+					material Material {
+					 diffuseColor .51 .17 .06
+					specularColor .53 .53 .53
+					ambientIntensity .06
+					shininess .93
+					}
+				}
+				geometry Extrusion {
+					crossSection [
+							1 0, 0.87 -0.5, 0.5 -0.87,
+						0 -1, -0.5 -0.87, -0.87 -0.5,
+						-1 0, -0.87 0.5, -0.5 0.87,
+						0 1, 0.5 0.87,0.87 0.5,
+						1 0]
+						spine [ 0 3 0,0.2 3.6 0, 0 6 0]
+						scale [0.1 0.15, 0.2 .25, 0.2 0.25]
+						creaseAngle	1
+						solid TRUE
+					}
+
+			}
+		]
+	}
+	Transform {
+		translation	-0.5 0 0.8 
+		children [
+			USE	QuaTao
+		]
+	
+	}
+
+
+	DEF	lacay Transform {
+	rotation 0 1 0 0.785
+	translation	-0.2 0 -0.6 
+	children [
+	DEF	la Transform	{
+				children [
+					Shape {
+						appearance Appearance {
+							material Material {
+								diffuseColor .53 .82 .02
+								specularColor .04 .1 0
+								emissiveColor .06 .1 0
+								ambientIntensity .11
+								shininess .08
+							}
+						}
+						geometry Extrusion {
+							crossSection [
+								1	0
+								0.98	0.19
+								0.92	0.38
+								0.83	0.56
+								0.71	0.71
+								0.56	0.83
+								0.38	0.92
+								0.20	0.98
+								0.00	1.00
+								-0.19	0.98
+								-0.38	0.92
+								-0.55	0.83
+								-0.71	0.71
+								-0.83	0.56
+								-0.92	0.38
+								-0.98	0.20
+								-1.00	0.00
+								-0.98	-0.19
+								-0.92	-0.38
+								-0.83	-0.55
+								-0.71	-0.71
+								-0.56	-0.83
+								-0.38	-0.92
+								-0.20	-0.98
+								0.00	-1.00
+								0.19	-0.98
+								0.38	-0.92
+								0.55	-0.83
+								0.71	-0.71
+								0.83	-0.56
+								0.92	-0.39
+								0.98	-0.20
+								1.00	0.00
+							]
+							spine [0 0 0,0 0.1 0,0 0.2 0,0 0.3 0,0 0.4 0,0 0.5 0,0 0.6 0]
+							scale [0.01 0.01,0.075 0.01,0.15 0.01,0.2 0.01,0.15 0.01,0.075 0.01,0 0]
+							creaseAngle	1
+    						beginCap  TRUE
+    						endCap    TRUE
+    						solid   FALSE
+						}
+			
+					}
+				]
+			}
+
+			DEF	la1 Transform {
+				rotation 1 0 0 0.785
+				children [
+					USE	la
+				]
+			}
+			DEF	la2	Transform {
+				rotation 1 0 0 -0.782
+				children [
+					USE	la
+				]
+			}
+			DEF	la3	Transform {
+				rotation 0 1 0 1.57
+				children [
+					USE	la1
+				]
+			}
+		]
+	}
+	DEF	dia Transform {
+		children [
+			Shape {
+				appearance Appearance {
+					material Material {
+						diffuseColor .8 .16 0
+						specularColor .5 .5 .5
+						emissiveColor .15 .03 0
+						ambientIntensity 0
+					}
+				}
+				geometry Extrusion {
+					crossSection [
+					1	0
+					0.98	0.19
+					0.92	0.38
+					0.83	0.56
+					0.71	0.71
+					0.56	0.83
+					0.38	0.92
+					0.20	0.98
+					0.00	1.00
+					-0.19	0.98
+					-0.38	0.92
+					-0.55	0.83
+					-0.71	0.71
+					-0.83	0.56
+					-0.92	0.38
+					-0.98	0.20
+					-1.00	0.00
+					-0.98	-0.19
+					-0.92	-0.38
+					-0.83	-0.55
+					-0.71	-0.71
+					-0.56	-0.83
+					-0.38	-0.92
+					-0.20	-0.98
+					0.00	-1.00
+					0.19	-0.98
+					0.38	-0.92
+					0.55	-0.83
+					0.71	-0.71
+					0.83	-0.56
+					0.92	-0.39
+					0.98	-0.20
+					1.00	0.00
+					]
+					spine [0 0 0, 0 0.3 0]
+					scale [1.1 1.1,1.1 1.1]
+					solid FALSE
+					endCap FALSE
+					beginCap TRUE
+				}
+			}
+		]
+	
+	}

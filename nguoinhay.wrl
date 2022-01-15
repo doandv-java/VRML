@@ -1,0 +1,87 @@
+#VRML V2.0 utf8
+ 
+DEF taphop Transform {
+	children [
+		Transform {
+			children [
+				DEF nguoi1 Transform {
+					children [
+						DEF nguoi Transform {
+							children[
+								DEF nguoi2 Transform {
+									children [
+										DEF nguoinhay Transform	{
+											children [
+												DEF nguoi4 Group {
+													children [
+														Inline {
+															url	"nunhaymua.wrl"
+															bboxCenter 0 0 0
+															bboxSize -1 -1 -1
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+								Transform {
+									translation	0 0 10
+									children[
+										Transform {
+											children USE nguoi4
+										}
+									]
+								}
+								Transform {
+									translation	0 0 -10
+									children[
+										Transform {
+											children USE nguoi4
+										}
+									]
+					
+								}
+								Transform {
+									translation	10 0 0
+									children[
+										Transform {
+											children USE nguoi4
+										}
+									]
+								}
+								Transform {
+									translation	-10 0 0
+									children[
+										Transform {
+											children USE nguoi4
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+
+				DEF time1 TimeSensor {
+					enabled	TRUE
+					loop TRUE
+					cycleInterval 4
+				}
+				DEF orent OrientationInterpolator	{
+					key	[0,0.25,0.5,0.75,1 ]
+					keyValue [0 1 0 0,0 1 0 0.1,0 1 0 0,0 1 0 -0.1,0 1 0 0]
+				}
+			]
+
+		ROUTE  time1.fraction_changed TO orent.set_fraction
+		ROUTE orent.value_changed	TO nguoinhay.rotation
+		}
+	]
+}
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+#VRML V2.0 utf8
+
+DEF mattroi Transform {
+
+	children [
+		Shape {
+			appearance Appearance {
+				material DEF mau Material {
+					diffuseColor 1 .85 0
+					specularColor .87 .25 .25
+					ambientIntensity .157
+					shininess 1
+				}
+				texture	ImageTexture {
+					url	""
+					repeatS	TRUE
+					repeatT	TRUE
+				}
+			}
+			geometry Sphere {
+				radius 1
+			}
+		}
+
+		DEF time TimeSensor {
+			enabled	TRUE
+			loop TRUE
+			cycleInterval 5
+		}
+
+		DEF point SpotLight {
+			on FALSE
+			intensity 1
+			ambientIntensity 0
+			color 1 1 1
+			location 0 0 0
+			direction 0 0 0
+			attenuation 1 0 0
+			radius 100
+			cutOffAngle 0.78
+			beamWidth 1.57
+		}
+		DEF mausac ColorInterpolator {
+			key	[0 ,0.5,1]
+			keyValue [1 0.75 0,1 0.85 0, 1 0.8 0]
+		}
+	]
+ROUTE time.enabled TO point.on
+ROUTE time.fraction_changed	TO mausac.set_fraction
+ROUTE mausac.value_changed TO mau.diffuseColor
+ROUTE mausac.value_changed TO point.color
+}

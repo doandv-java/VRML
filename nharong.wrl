@@ -1,0 +1,1527 @@
+#VRML V2.0 utf8
+	  
+Transform {
+	children [
+		DEF	nharong Transform {
+
+			translation	0 4 0
+			children [	
+				DEF cot1 Transform {
+					translation	5 0 -2
+					children [
+					Shape {					
+						appearance DEF mau Appearance {
+							material Material {}
+							texture ImageTexture {
+							url "images/maugo.jpg"
+							repeatS TRUE
+							repeatT TRUE
+					}
+							}
+
+							geometry Cylinder{
+							height 8
+							radius 0.2
+							bottom TRUE
+							top TRUE
+							side TRUE
+						}	
+					}	   
+				]
+			}
+				DEF	cot2 Transform {
+					translation	0 0 4
+					children [
+						USE	cot1
+					]
+				}
+
+				DEF	cot3 Transform {
+					translation	-10 0 0
+					children [
+						USE	cot1
+					]
+				}
+		
+				DEF	cot4 Transform {
+					translation	-10 0 0
+					children [
+						USE	cot2
+					]
+				}
+
+		
+				DEF	cot5 Transform {
+					translation	-2.5 0 0
+					children [
+						USE	cot1
+					]
+				}
+
+				DEF	cot6 Transform {
+					translation	-5 0 0
+					children [
+						USE	cot5
+					]
+				}
+
+				DEF	cot7 Transform {
+					translation	0 0 4
+					children [
+						USE	cot6
+					]
+				}
+				DEF	cot8 Transform {
+					translation	0 0 4
+					children [
+						USE	cot5
+					]
+				}
+
+				DEF	cot9 Transform {
+					translation	5 -2 0
+					children [
+						  Shape {
+							appearance USE mau
+							geometry Cylinder{
+							height 4
+							radius 0.2
+							bottom TRUE
+							top TRUE
+							side TRUE
+						}	
+					}
+					]
+				}
+				DEF	cot10 Transform	{
+					translation	-10 0 0 
+					children [
+						USE	cot9
+					]
+				}
+
+					DEF	cot11 Transform {
+					translation	2.5 -1.5 5
+					children [
+						  Shape {
+							appearance  USE	mau
+							geometry Cylinder{
+							height 5
+							radius 0.2
+							bottom TRUE
+							top TRUE
+							side TRUE
+						}	
+					}
+						DEF phangiua Transform {
+									translation	0 2.5 0
+									children [
+										Shape {
+											appearance USE mau
+											geometry Cylinder {
+												height 1
+												radius 0.15
+												bottom TRUE
+												top TRUE
+												side TRUE	
+											}
+								}
+							]
+						}
+						DEF phandau Transform {
+						translation	0 3.5 0
+						children [
+							Shape {
+								appearance USE mau
+						geometry Cylinder {
+							height 1
+							radius 0.2
+							bottom TRUE
+							top TRUE
+							side TRUE	
+						}
+					}
+				]
+			}
+		]
+		}
+				DEF	cot12 Transform	{
+					translation	-5 0 0
+					children [
+						USE	cot11
+					]
+				}
+				DEF	thanhngang1 Transform {
+					rotation 0 1 0 1.57
+					translation	5 0 0
+					children [
+						Shape {
+							appearance USE mau
+							geometry Box {size 5 0.2 0.2}
+
+						}
+					]
+				}
+
+				DEF	thanhngang2 Transform {
+					translation	-10 0 0
+					children [
+						USE	thanhngang1
+					]
+				}
+
+				DEF	thanhngang3	Transform {
+					translation	0 0 -2
+					children [
+						Shape {
+							appearance USE mau
+							geometry Box {size 11 0.2 0.2}
+
+						}
+					]
+		
+				}
+				DEF	thanhngangtren1 Transform {
+					translation	0 4 0
+					scale 1.3 1 1 
+					children [
+						USE	thanhngang3
+					]
+				}
+
+				DEF	thanhngang4	Transform {
+					translation	0 0 4
+					children [
+						USE	thanhngang3
+					]
+				}
+				DEF	thanhngangtren2	Transform {
+					translation	0 4 0
+					scale 1.3 1 1
+					children [
+						USE	thanhngang4
+					]
+				}
+				DEF	thanhngang5	Transform {
+					rotation 0 1 0 1.57
+					translation	2.5 0 1.5
+					children [
+						Shape {
+							appearance USE mau
+							geometry Box {size 8 0.2 0.2}
+
+						}
+					]
+				}
+				DEF	thanhngang6	Transform {
+					translation	-5 0 0
+					children [
+						USE	thanhngang5
+					]
+				}
+				DEF	thanhngang7	Transform {
+					translation	0 0 5
+					children [
+						Shape {
+							appearance USE mau
+							geometry Box {size 5 0.2 0.2}
+						}
+					]
+				}
+		
+				#thanh ngang tren 
+				DEF	thanhngang8	Transform {
+					translation	0 4 0
+					children [
+						USE	thanhngang1
+					]
+				}
+				DEF	thanhngang9	Transform {
+					translation	-2.5 0 0
+					children [
+						USE	thanhngang8
+					]
+				}
+				DEF	thanhngang10	Transform {
+					translation	-5 0 0
+					children [
+						USE	thanhngang9
+					]
+				}
+				DEF	thanhngang11	Transform {
+					translation	-2.5 0 0
+					children [
+						USE	thanhngang10
+					]
+				}
+				DEF	sannha Transform {
+					translation	5 0.1 0
+					rotation 0 1 0 1.57
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {}
+								 texture DEF mausan ImageTexture {
+										url "images/anh.jpg"
+										repeatS TRUE
+										repeatT TRUE
+										}
+
+							}
+							geometry Box {size 5 0.03 1}
+						}
+					]
+				}
+				DEF	sannha1 Transform {
+					translation	-1.009 0 0
+					children [
+						USE	sannha
+					]
+				}
+				DEF	sannha2 Transform {
+					translation	-1.009 0 0
+					children [
+						USE	sannha1
+					]
+				}
+				DEF	sannha3 Transform {
+					translation	-1.009 0 0
+					children [
+						USE	sannha2
+					]
+				}
+				DEF	sannha4 Transform {
+					translation	-1.009 0 0
+					children [
+						USE	sannha3
+					]
+				}
+				DEF	sannha5 Transform {
+					translation	-1.009 0 0
+					children [
+						USE	sannha4
+					]
+				}
+				DEF	sannha6 Transform {
+					translation	-1.009 0 0
+					children [
+						USE	sannha5
+					]
+				}
+				DEF	sannha7 Transform {
+					translation	-1.009 0 0
+					children [
+						USE	sannha6
+					]
+				}
+				DEF	sannha8 Transform {
+					translation	-1.009 0 0
+					children [
+						USE	sannha7
+					]
+				}
+				DEF	sannha9 Transform {
+					translation	-1.009 0 0
+					children [
+						USE	sannha8
+					]
+				}
+				DEF	sannha10 Transform {
+					translation	-1.009 0 0
+					children [
+						USE	sannha9
+					]
+				}
+				DEF	sannha11 Transform {
+					translation	0 0.1 3
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {}
+								 texture USE mausan
+							}
+							geometry Box {size 6 0.03 1}
+						}
+					]
+				}
+				DEF	sannha12 Transform {
+					translation	0 0 1.009
+					children [
+						USE	sannha11
+					]
+				}
+				DEF	sannha13 Transform {
+					translation	0 0 1.009
+					children [
+						USE	sannha12
+					]
+				}
+
+				# cot cua
+				DEF	cottrai Transform {
+					translation	 1.25 1.5 2
+					children [
+						Shape {
+							appearance USE mau
+							geometry Cylinder {
+								height 3
+								radius 0.1
+								bottom TRUE
+								top TRUE
+								side TRUE
+							}
+						}
+					]
+				}
+				DEF	cotphai Transform {
+					translation	-2.5 0 0
+					children [
+						USE	cottrai
+					]
+				}
+				#thanh ngang cua
+				DEF	thangngangcua Transform	{
+					translation	0 3 2
+					children [
+						Shape {
+							appearance USE mau
+							geometry Box {
+								size 2.5 0.1 0.1
+							}
+						}
+				
+					]
+				}
+				#vach gan cua 
+				DEF	vachtrencua Transform {
+					translation	0 3.5 2
+					children [
+						Shape {
+							appearance Appearance {
+								texture DEF mauvach ImageTexture {
+										url "images/anhvach.jpg"
+										repeatS TRUE
+										repeatT TRUE
+										}
+
+							}
+							geometry Box {size 5 1 0.01}
+						}
+					]
+				}
+
+				DEF	vachngancuatrai Transform {
+					translation	1.875 1.5 2
+					children [
+						Shape {
+							appearance Appearance {
+								  texture USE mauvach
+							}
+							geometry Box {size 1.25 3 0.01}
+						}
+					]
+				}
+
+				DEF	vachngancuaphai Transform {
+					translation	-3.75 0 0
+					children [
+						USE	vachngancuatrai
+					]
+				}
+				DEF	vach Transform	{
+					translation	-3.75 2 -2 
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {}
+								 texture USE mauvach
+							}
+							geometry Box {size 2.5 4 0.01}
+						}
+					]
+				}
+				DEF	vach1 Transform	{
+					translation	7.5 0 0
+					children [
+						USE	vach
+					]
+				}
+				DEF	vach3 Transform	{
+					translation	0 2 -2
+					children [
+						Shape {
+							appearance Appearance {
+								 texture USE mauvach
+
+							}
+							geometry Box {size 5 4 0.01}
+						}
+					]
+				}
+				DEF	vach4 Transform	{
+					translation	5 2 0
+					rotation 0 1 0 1.57
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {}
+								 texture USE mauvach
+
+							}
+							geometry Box {size 4 4 0.01}
+						}
+					]
+				}
+				DEF	vach5 Transform	{
+					translation	-10 0 0
+					children [
+						USE	vach4
+					]
+				}
+				DEF	vach6 Transform	{
+					translation	0 0 4
+					children [
+						USE	vach
+					]
+				}
+				DEF	vach7 Transform	{
+					translation	0 0 4
+					children [
+						USE	vach1
+					]
+				}
+
+				#cot o hien
+				DEF	cothientrai Transform {
+					translation	2.5 1 4.5
+					children [
+						Shape {
+							appearance USE mau
+							geometry Cylinder{
+							height 2
+							radius 0.15
+							bottom TRUE
+							top TRUE
+							side TRUE
+						}
+					}
+
+					]
+				}
+				DEF	cothienphai Transform {
+					translation	-5 0 0
+					children [
+						USE	cothientrai
+					]
+				}
+
+				DEF	cheotrai Transform {
+					rotation 0 1 0 1.57
+					translation	2.5 1 3.25
+					children [
+						DEF	cheo1 Transform	{
+							rotation 0 0 1 0.3925
+							children [
+								Shape {
+									appearance USE mau
+									geometry Box {size 3 0.1 0.1}
+								}
+							]
+						}
+						DEF	cheo2 Transform	{
+							rotation 0 0 1 -0.785
+							children [
+								USE	cheo1
+							]
+
+						}
+					]
+				}
+				DEF	cheophai Transform {
+					translation	-5 0 0
+					children [
+						USE	cheotrai
+					]
+				}
+				DEF	ngangtrai Transform	{
+					translation	2.5 1.5 3.25
+					rotation 0 1 0 1.57
+					children [
+						Shape {
+							 appearance USE mau
+							geometry Box {size 2.5 0.1 0.1}
+						}
+					]
+				}
+				DEF	ngangphai Transform	{
+					translation	-5 0 0
+					children [
+						USE	ngangtrai
+					]
+				}
+
+				#cau thang
+				DEF	cauthang   Transform {
+					rotation 1 0 0 -0.55
+					translation	1.5 -4 8
+					children [
+							DEF	raunhon Transform {
+								translation	0 5.1 0
+								children [
+									Shape {
+										appearance USE mau
+										geometry Extrusion {
+											crossSection [
+																			0.2 0.1
+																			-0.2 0.1
+																			-0.2 -0.1
+																			0.2 -0.1
+																			0.2 0.1					 	
+											]
+							#				0 0 0.3,0 0.1 0.26,0 0.2 0.22,0 0.3 0.18,0 0.4 0.14,0 0.5 0.1,0 0.6 0.06,0 0.75 0.02,
+											spine [0 0.85 0,0 0.95 -0.1,0 1 -0.2,0 1 -0.3,0 0.9 -0.4,0 0.8 -0.5,0 0.6 -0.5,0 0.5 -0.4,0 0.45 -0.35,0 0.4 -0.3,0 0.4 -0.25]
+											scale [0.25 1,0.25 1,0.25 1,0.25 1,0.25 1,0.25 1,0.25 1,0.25 1,0.25 1,0.25 1,0.25 1]
+											beginCap TRUE
+											endCap TRUE
+											creaseAngle	1
+											solid FALSE
+										}
+
+									}
+								]
+							}
+							DEF	thanhchinh Transform {
+							#	rotation 1 0 0 -0.785
+								children [
+									Shape {
+										appearance USE mau
+										geometry Extrusion {
+											crossSection [
+												0.2 0.1
+												-0.2 0.1
+												-0.2 -0.1
+												0.2 -0.1
+												0.2 0.1
+											]
+											spine [0 0 0,0 6 0]
+											scale [1 1,0.5 0.5]
+											creaseAngle	1
+											beginCap TRUE
+											endCap TRUE
+											solid   FALSE
+										}
+									}
+								]
+							}
+							DEF	bacthang Transform {
+								translation	-0.2 0.5 0.02
+								rotation 0 0 1 -1.57
+								children [
+									Shape {
+										appearance USE mau
+										geometry Extrusion {
+											crossSection [
+												1	0
+												0.7	0.2
+												0.5	0.71
+												0.38	0.92
+												0.00	1
+												-0.38	0.92
+												-0.5	0.71
+												-0.7	0.2
+												-1	0.00
+												0 0
+												1 0
+											]
+											spine [0 0 0,0 0.4 0]
+											scale [0.2 0.2,0.2 0.2]
+											creaseAngle	1
+											beginCap TRUE
+											endCap TRUE
+											solid   FALSE
+										}
+									}
+								]
+							}
+							DEF	bacthang1 Transform	{
+								scale 0.9 0.9 0.9
+								translation	0 0.5 0.02
+								children [
+									USE	bacthang
+								]
+							}
+							DEF	bacthang2 Transform	{
+								scale 0.9 0.9 0.9
+								translation	0 1 0.02
+								children [
+									USE	bacthang
+								]
+							}
+							DEF	bacthang3 Transform	{
+								scale 0.9 0.9 0.9
+								translation	0 1.5 0.02
+								children [
+									USE	bacthang
+								]
+							}
+							DEF	bacthang4 Transform	{
+								scale  0.8 0.8 0.8
+								translation	0 2 0.02
+								children [
+									USE	bacthang
+								]
+							}
+							DEF	bacthang5 Transform	{
+								scale 0.7 0.7 0.7
+								translation	0 2.5 0.03
+								children [
+									USE	bacthang
+								]
+							}
+							DEF	bacthang6 Transform	{
+								scale 0.7 0.7 0.7
+								translation	0 3 0.03
+								children [
+									USE	bacthang
+								]
+							}
+							DEF	bacthang7 Transform	{
+								scale 0.6 0.6 0.6
+								translation	0 3.5 0.03
+								children [
+									USE	bacthang
+								]
+							}
+							DEF	bacthang8 Transform	{
+								scale 0.6 0.6 0.6
+								translation	0 4 0.03
+								children [
+									USE	bacthang
+								]
+							}
+				]
+				}
+				DEF	cauthangphai Transform {
+					translation	-3 0 0
+					children [
+						USE	cauthang
+					]
+				}
+
+				#anh bac ho
+				DEF	anhbacho Transform {
+					rotation 1 0 0 0.196
+					translation	0 3 -1.9
+					children [
+						Shape {
+							appearance Appearance {
+								material USE mau
+								texture ImageTexture {
+										url "images/bacho.jpg"
+										repeatS TRUE
+										repeatT TRUE
+										}
+							}
+							geometry Box {size 0.4 0.5 0.01}
+						}
+					]
+				}
+
+				#mai nha 		
+				DEF	maitruoc Transform {
+					translation	0 4 2.5
+					rotation 1 0 0 -0.196
+					children [
+						Shape {
+							appearance Appearance {
+								texture DEF maumainha ImageTexture {
+												url "images/mauromra.png"
+												repeatS TRUE
+												repeatT TRUE
+												}	 
+							}
+							geometry Extrusion {
+								crossSection [
+									2.5 0.1
+									-2.5 0.1
+									-2.5 -0.1
+									2.5 -0.1
+									2.5 0.1
+								]
+								spine [0 0 0 ,0 13 0]
+								scale [3 0.1 ,1.8 0.5]
+								beginCap TRUE
+								endCap TRUE
+								solid   FALSE
+
+							}
+						}
+					]
+				}
+				DEF	maisau Transform {
+							translation	0 4 -2.5
+							rotation 1 0 0 0.196
+							children [
+								Shape {
+									appearance Appearance {
+										texture USE	maumainha
+									}
+									geometry Extrusion {
+										crossSection [
+											2.5 0.1
+											-2.5 0.1
+											-2.5 -0.1
+											2.5 -0.1
+											2.5 0.1
+										]
+										spine [0 0 0 ,0 13 0]
+										scale [3 0.5 ,1.8 0.5]
+										beginCap TRUE
+										endCap TRUE
+										solid   FALSE
+
+									}
+								}
+							]
+						}
+		DEF	maiphai1 Transform {
+			translation	-6.7 4 0
+			rotation 0 1 0 1.57
+			children [
+				DEF	maiphai Transform {
+						rotation 1 0 0 0.19625
+						children [
+							Shape {
+									appearance Appearance {
+											texture USE	maumainha
+										}
+										geometry Extrusion {
+											crossSection [
+												2.5 0.1
+												-2.5 0.1
+												-2.5 -0.1
+												2.5 -0.1
+												2.5 0.1
+											]
+											spine [0 0 0 ,0 12.9 0]
+											scale [1 0.5 ,0 0]
+											beginCap TRUE
+											endCap TRUE
+											solid   FALSE
+
+										}
+									}
+						]
+					}
+			]
+		}
+		DEF	maiphai2  Transform {
+			translation	6.7 4 0
+			rotation 0 1 0 1.57
+			children [
+				DEF	maitrai Transform {
+					rotation 1 0 0 -0.19625
+					children [
+						Shape {
+								appearance Appearance {
+										texture USE	maumainha
+									}
+									geometry Extrusion {
+										crossSection [
+											2.5 0.1
+											-2.5 0.1
+											-2.5 -0.1
+											2.5 -0.1
+											2.5 0.1
+										]
+										spine [0 0 0 ,0 12.9 0]
+										scale [1 0.5 ,0 0]
+										beginCap TRUE
+										endCap TRUE
+										solid   FALSE
+
+									}
+								}
+					]
+				}
+			]
+		}
+				DEF	cuamo Transform	{
+					translation	1.2 0.2 2
+					children [
+						DEF	cua Transform {
+							translation	-1.2 0 0
+							scale 1 0.95 1
+							children [
+								DEF	thanh1 Transform {
+									children [
+										Shape {
+											appearance USE mau
+											geometry Box {size 2.4 0.1 0.1}
+										}
+									]
+								}
+								DEF	thanh2 Transform {
+									translation	0 2.9 0
+									children [
+										USE	thanh1
+									]
+								}
+								DEF	thanh3 Transform {
+									rotation 0 0 1 1.57
+									translation	1.15 1.4 0
+									children [
+										Shape {
+											appearance USE mau
+											geometry Box{size 2.9 0.1 0.1}
+										}
+									]
+								}
+								DEF	thanh4 Transform {
+									translation	-2.3 0 0
+									children [
+										USE	thanh3
+									]
+								}
+								DEF	tamgiua Transform {
+									translation	0 1.4 0
+									children [
+										Shape {
+											appearance Appearance {
+												texture USE	mauvach
+											}
+											geometry Box {size 2.3 2.9 0.05}
+										}
+									]
+								}
+						
+							]
+
+				
+
+						}
+						DEF	cylsensor1 CylinderSensor {
+									enabled	TRUE
+									offset 0
+									autoOffset TRUE
+									maxAngle 1.96
+									minAngle 0
+									diskAngle 0.001
+								}
+					]
+						ROUTE cylsensor1.rotation_changed TO cuamo.rotation
+					}
+		#VRML V2.0 utf8
+
+					DEF	beplua Transform {
+						rotation 0 1 0 -0.3925
+						scale 1.5 1.5 1.5
+						children [
+							DEF	cui Transform {	
+								translation	-0.2 0.25 0
+								rotation 0 0 1 -1.177
+								children [
+									Shape {
+										appearance Appearance {
+											material Material {
+												diffuseColor .8 .16 0
+												specularColor .5 .5 .5
+												emissiveColor .15 .03 0
+												ambientIntensity 0
+											}
+										}
+										geometry Cylinder {
+											height 0.5
+											radius 0.05
+											bottom TRUE
+											top TRUE
+											side TRUE
+										}
+									}
+								]
+		
+							}
+							DEF	cui1 Transform{
+								rotation 0 1 0 2.093
+								children [
+									USE	cui
+								]
+							}
+							DEF	cui2 Transform {
+								rotation 0 1 0 2.093
+								children [
+									USE	cui1
+								]
+							}
+							DEF	lua Transform {
+								scale 3.5 5.5 3.5
+								translation	0 0.35 0
+								children [
+									Shape {
+										appearance Appearance {
+											material Material {
+												diffuseColor .49 .04 .05
+												specularColor 1 1 1
+												emissiveColor .46 .04 .04
+												ambientIntensity 0
+												transparency .54
+											}
+										}
+										geometry Extrusion {
+											crossSection [
+												1	0
+												0.98	0.19
+												0.92	0.38
+												0.83	0.56
+												0.71	0.71
+												0.56	0.83
+												0.38	0.92
+												0.20	0.98
+												0.00	1.00
+												-0.19	0.98
+												-0.38	0.92
+												-0.55	0.83
+												-0.71	0.71
+												-0.83	0.56
+												-0.92	0.38
+												-0.98	0.20
+												-1.00	0.00
+												-0.98	-0.19
+												-0.92	-0.38
+												-0.83	-0.55
+												-0.71	-0.71
+												-0.56	-0.83
+												-0.38	-0.92
+												-0.20	-0.98
+												0.00	-1.00
+												0.19	-0.98
+												0.38	-0.92
+												0.55	-0.83
+												0.71	-0.71
+												0.83	-0.56
+												0.92	-0.39
+												0.98	-0.20
+												1.00	0.0
+											]			   
+											spine	[ 0 0 0, 0 0.01 0, 0 0.02 0, 0 0.03 0,0 0.04 0,0 0.05 0,0 0.06 0,0 0.07 0,0 0.08 0,0 0.1 0]
+    										scale	[0.01 0.01,0.02 0.01,0.03 0.01,0.04 0.01,0.04 0.01,0.03 0.01,0.025 0.01,0.02 0.01,0.015 0.01,0.001 0.001]
+    										beginCap  TRUE
+    										endCap    TRUE
+    										solid     FALSE
+										}
+									}
+								]
+							}
+							DEF	lua2 Transform {
+								rotation 0 1 0 1.57
+								children [
+									USE	lua
+								]
+							}
+								DEF	de Transform {
+									translation 0 0.1 0
+									children [
+										Shape {
+												 appearance Appearance {
+													material Material {
+														diffuseColor 0 0 0
+														specularColor .5 .5 .5
+														emissiveColor .15 .15 .15
+														ambientIntensity 0
+													}
+												}
+												geometry Extrusion {
+													crossSection [
+														1	0
+														0.92	0.38
+														0.71	0.71
+														0.38	0.92
+														0.00	1.00
+														-0.38	0.92
+														-0.71	0.71
+														-0.92	0.38
+														-1.00	0.00
+														-0.92	-0.38
+														-0.71	-0.71
+														-0.38	-0.92
+														0.00	-1.00
+														0.38	-0.92
+														0.71	-0.71
+														0.92	-0.39
+														1.00	0.00
+													]
+													spine [0 0 0,0 0.01 0]
+													scale [0.5 0.5,0.5 0.5]
+													creaseAngle	1
+													endCap TRUE
+													beginCap TRUE
+													solid FALSE
+														}																  
+											}		
+									]
+								}
+						]
+					}
+
+					DEF	ruoucan Transform {
+						scale 0.1 0.15 0.1
+						translation	-2.5 0.15 -0.4
+						children [
+							Shape {
+								appearance Appearance {
+									material Material {
+										diffuseColor .8 .31 0
+										specularColor .5 .5 .5
+										emissiveColor .15 .06 0
+										ambientIntensity 0
+									}
+								}
+								geometry Extrusion {
+									crossSection [
+										1	0
+										0.98	0.19
+										0.92	0.38
+										0.83	0.56
+										0.71	0.71
+										0.56	0.83
+										0.38	0.92
+										0.20	0.98
+										0.00	1.00
+										-0.19	0.98
+										-0.38	0.92
+										-0.55	0.83
+										-0.71	0.71
+										-0.83	0.56
+										-0.92	0.38
+										-0.98	0.20
+										-1.00	0.00
+										-0.98	-0.19
+										-0.92	-0.38
+										-0.83	-0.55
+										-0.71	-0.71
+										-0.56	-0.83
+										-0.38	-0.92
+										-0.20	-0.98
+										0.00	-1.00
+										0.19	-0.98
+										0.38	-0.92
+										0.55	-0.83
+										0.71	-0.71
+										0.83	-0.56
+										0.92	-0.39
+										0.98	-0.20
+										1.00	0.00		
+									]
+									spine [0 0 0,0 2.1 0,0 3.2 0,0 4.4 0,0 5 0,0 5.6 0,0 5.8 0,0 6.45 0,0 6.6 0,0 7 0,0 7.2 0,0 7.4 0 ,0 7.5 0]
+									scale [1.4 1.4,2.5 2.5,2.8 2.8,3.1 3.1,3.1 3.1,3 3,2.9 2.9,2.5 2.5,2.3 2.3,1.4 1.4,1.4 1.4,1.6 1.6,1.5 1.5]	
+
+									creaseAngle	1
+    								beginCap  TRUE
+    								endCap    FALSE
+    								solid   FALSE
+							}
+						}
+							DEF	onghut Transform	{
+								scale 5 5 5
+								translation	0 6 0
+								children [
+									Shape {
+										appearance Appearance {
+											material Material {
+												diffuseColor .75 .56 0
+												specularColor .84 .84 .84
+												emissiveColor .1 .07 0
+												ambientIntensity .11
+												shininess .61
+											}
+										}
+										geometry Extrusion {
+											crossSection [
+												1	0
+												0.98	0.19
+												0.92	0.38
+												0.83	0.56
+												0.71	0.71
+												0.56	0.83
+												0.38	0.92
+												0.20	0.98
+												0.00	1.00
+												-0.19	0.98
+												-0.38	0.92
+												-0.55	0.83
+												-0.71	0.71
+												-0.83	0.56
+												-0.92	0.38
+												-0.98	0.20
+												-1.00	0.00
+												-0.98	-0.19
+												-0.92	-0.38
+												-0.83	-0.55
+												-0.71	-0.71
+												-0.56	-0.83
+												-0.38	-0.92
+												-0.20	-0.98
+												0.00	-1.00
+												0.19	-0.98
+												0.38	-0.92
+												0.55	-0.83
+												0.71	-0.71
+												0.83	-0.56
+												0.92	-0.39
+												0.98	-0.20
+												1.00	0.00
+											]
+											spine [-0.1 -0.1 0,0 0 0,0.3 0.3 0,0.7 0.7 0,1.3 0.9 0,1.6 1.2 0]
+											scale [0.019 0.019,0.015 0.015,0.015 0.015,0.015 0.015,0.009 0.009,0.01 0.01]
+											creaseAngle	1
+    										beginCap  TRUE
+    										endCap    TRUE
+    										solid   FALSE
+										}
+			
+									}
+								]
+							}
+							DEF	onghut1 Transform {
+								rotation 0 1 0 1.57
+								children [
+									USE	onghut
+								]
+							}
+							DEF	onghut2 Transform {
+								rotation 0 1 0 -1.57
+								children [
+									USE	onghut
+								]
+							}
+					]
+					}
+					DEF	giaderuoucan Transform {
+						translation	-2.5 0.1 -0.75
+						children [
+							DEF	ngangduoi Transform	{
+								translation	0 0.1 0
+								children [
+									Shape {
+										appearance USE mau
+										geometry Box {size 3 0.1 0.1}
+									}
+								]
+							}
+							DEF	ngangtren Transform	{
+								translation	0 1.2 0
+								children [
+									USE	ngangduoi
+								]
+							}
+							DEF	trutrai Transform {
+								translation	1.3 0.8 0
+								children [
+									Shape {
+										appearance USE mau
+										geometry Cylinder {
+											height 1.6
+											radius 0.15
+											bottom TRUE
+											top TRUE
+											side TRUE
+										}
+									}
+								]
+							}
+							DEF	truphai Transform {
+								translation	-2.6 0 0
+								children [
+									USE	trutrai
+								]
+							}
+							DEF	trugiua Transform {
+								translation	0 0.7 0
+								children [
+									Shape {
+										appearance  USE mau
+										geometry Box {size 0.1 1.4 0.1}
+									}
+				
+								]
+							}
+						]
+					}
+
+					DEF	tamchieu Transform {
+						translation	2.7 0.15 -0.5
+						children [
+							Shape {
+								appearance Appearance {
+									texture ImageTexture {
+											url "images/chieu.jpg"
+											repeatS TRUE
+											repeatT TRUE
+											}
+								}
+								geometry Box {size 2.5 0.01 2}
+							}
+
+					DEF	dia Transform {
+						scale 0.35 0.35 0.35
+						translation	0 0.05 0
+						children [
+							Inline {
+								url ["diahoaqua.wrl"]
+								bboxCenter 0 0 0
+								bboxSize -1 -1 -1
+						}
+						]
+					}
+								]
+					}
+
+					DEF	trong Transform	{
+						translation	-2.5 4 1
+						children [
+							DEF	tran2 Transform	{
+								translation	0 -0.91 0
+								children [
+									DEF	tran1 Transform {
+										rotation 0 0 1 1.57
+										translation	0.5 0 0
+										children [
+												Shape {
+													appearance Appearance {
+														material Material {
+															diffuseColor .8 .16 0
+															specularColor .5 .5 .5
+															emissiveColor .15 .03 0
+															ambientIntensity 0
+														}
+													}
+													geometry Extrusion {
+														crossSection [
+															1	0
+															0.98	0.19
+															0.92	0.38
+															0.83	0.56
+															0.71	0.71
+															0.56	0.83
+															0.38	0.92
+															0.20	0.98
+															0.00	1.00
+															-0.19	0.98
+															-0.38	0.92
+															-0.55	0.83
+															-0.71	0.71
+															-0.83	0.56
+															-0.92	0.38
+															-0.98	0.20
+															-1.00	0.00
+															-0.98	-0.19
+															-0.92	-0.38
+															-0.83	-0.55
+															-0.71	-0.71
+															-0.56	-0.83
+															-0.38	-0.92
+															-0.20	-0.98
+															0.00	-1.00
+															0.19	-0.98
+															0.38	-0.92
+															0.55	-0.83
+															0.71	-0.71
+															0.83	-0.56
+															0.92	-0.39
+															0.98	-0.20
+															1.00	0.00
+														]
+														spine [0 0 0,0 0.1 0,0 0.2 0,0 0.3 0,0 0.4 0,0 0.5 0,0 0.6 0,0 0.7 0,0 0.8 0,0 0.9 0,0 1 0]
+														scale [0.3 0.3,0.35 0.35,0.4 0.4,0.45 0.45 ,0.5 0.5,0.51 0.51,0.5 0.5,0.45 0.45,0.4 0.4,0.35 0.35,0.3 0.3]
+														creaseAngle	1
+    													beginCap  TRUE
+    													endCap    TRUE
+    													solid   FALSE
+													}
+												}
+												DEF	matbenduoitrong Transform {
+													translation	0 -0.01 0
+													children [
+														Shape {
+															appearance Appearance {
+																material Material {
+																	diffuseColor .8 .63 0
+																	specularColor .5 .5 .5
+																	emissiveColor .14 .11 0
+																	ambientIntensity 0
+																}
+															}
+															geometry Extrusion {
+																crossSection [
+																	 1	0
+																	0.98	0.19
+																	0.92	0.38
+																	0.83	0.56
+																	0.71	0.71
+																	0.56	0.83
+																	0.38	0.92
+																	0.20	0.98
+																	0.00	1.00
+																	-0.19	0.98
+																	-0.38	0.92
+																	-0.55	0.83
+																	-0.71	0.71
+																	-0.83	0.56
+																	-0.92	0.38
+																	-0.98	0.20
+																	-1.00	0.00
+																	-0.98	-0.19
+																	-0.92	-0.38
+																	-0.83	-0.55
+																	-0.71	-0.71
+																	-0.56	-0.83
+																	-0.38	-0.92
+																	-0.20	-0.98
+																	0.00	-1.00
+																	0.19	-0.98
+																	0.38	-0.92
+																	0.55	-0.83
+																	0.71	-0.71
+																	0.83	-0.56
+																	0.92	-0.39
+																	0.98	-0.20
+																	1.00	0.00
+																]
+																spine [0 0 0,0 0.1 0,0 0.2 0]
+																scale [0.3 0.3,0.35 0.35,0.4 0.4]
+																creaseAngle	1
+    															beginCap  TRUE
+    															endCap    FALSE
+    															solid   FALSE
+															}
+														}
+													]
+												}
+												DEF	mattrentrong Transform {
+													rotation 0 0 1 3.14
+													translation	0 1 0
+													children [
+														USE	matbenduoitrong
+													]
+												}
+											]
+										}
+									DEF	moc Transform {
+										translation	0 0.71 0
+										children [
+											Shape {
+												appearance Appearance {
+													material Material {}
+												}
+												geometry Cylinder {
+													height 0.4
+													radius 0.01
+													bottom TRUE
+													top TRUE
+													side TRUE
+												}
+											}
+										]
+									}
+								]
+							}
+
+
+					DEF	touch1 TouchSensor {enabled TRUE }
+
+					DEF	time1 TimeSensor {
+						cycleInterval 12
+						loop FALSE
+						enabled	FALSE
+					}
+
+					DEF	orient OrientationInterpolator {
+						key[0 0.167 0.334 0.5 0.667 0.833 1]
+						keyValue [0 0 1 0,0 0 1 -0.785,0 0 1 0.785,0 0 1 -0.785,0 0 1 0.785,0 0 1 -0.785,0 0 1 0]
+					}
+				]
+			}
+
+
+			DEF	 anh1 Transform	{
+				translation	3.5 2.2 -1.9
+				rotation 1 0 0 0.196
+				children [
+					Shape {
+						appearance Appearance {
+							material USE mau
+							texture ImageTexture {
+										url "images/anhlehoi.jpg"
+										repeatS TRUE
+										repeatT TRUE
+										}
+						}
+						geometry Box {size 0.75 0.6 0.01}
+					}
+			
+				]
+			}
+
+			]
+
+		}
+
+		DEF	chuoi Transform	{
+			translation	-12 0 0 
+			scale 1.5 1.5 1.5
+			children [
+				Inline {
+					url ["buichuoi.wrl"]
+					bboxCenter 0 0 0
+					bboxSize -1 -1 -1
+				}
+			]
+		}
+		DEF	tuva Transform	{
+			translation	-3.1 6.5 -1.6 
+			scale 0.3 0.3 0.3
+			children [
+				Inline {
+					url ["tuva.wrl"]
+					bboxCenter 0 0 0
+					bboxSize -1 -1 -1
+				}
+			]
+		}
+	
+	]
+}
+
+
+DEF	ma Script {
+	eventIn SFBool turnOn
+	eventOut SFBool On
+	eventOut SFBool Off
+	field SFBool turn FALSE
+	url "javascript:
+					function turnOn(val){
+								if(val){
+								turn = !turn;
+								if(turn)
+								{
+								On= TRUE;
+                        		Off=FALSE;
+            					}
+								else
+        						{
+									On=FALSE;
+									Off=TRUE;
+    							}
+
+            					}
+
+    								}
+
+    "
+}
+ROUTE touch1.isActive TO	ma.turnOn
+ROUTE ma.On	TO time1.enabled
+
+ROUTE time1.fraction_changed TO	orient.set_fraction
+ROUTE orient.value_changed TO trong.rotation
+ROUTE touch1.touchTime TO time1.startTime

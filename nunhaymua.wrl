@@ -1,0 +1,653 @@
+#VRML V2.0 utf8
+
+Viewpoint {
+#	orientation	0 1 0 1.57
+	position 0 0 30
+}
+Transform {
+	children [
+		Transform {
+			children [
+				DEF nu Transform {
+					children [
+						Transform {
+							children [
+								#dau nguoi
+								Transform {
+									translation	0 3 0
+									scale 0.8 1 0.8
+									children [
+										Shape {
+											geometry Sphere { radius	1.5}
+											appearance Appearance {
+												material Material {
+													ambientIntensity 0
+												}
+											}
+										}
+									]
+								}
+								#toc
+								Transform {
+									translation	0 3.5 0
+									scale 0.8 0.7 0.8
+									children [
+										Shape {
+											geometry Sphere { radius	1.6}
+											appearance Appearance {
+												material Material {
+													ambientIntensity 0
+													diffuseColor 0 0 0
+													specularColor .29 .3 .29
+													shininess .08
+												}
+											}
+										}
+									]
+								}
+								Transform {
+									translation	0 4.5 0
+									children [
+										Shape {
+											geometry Sphere { radius	0.5}
+											appearance Appearance {
+												material Material {
+													ambientIntensity 0
+													diffuseColor 0 0 0
+													specularColor .29 .3 .29
+													shininess .08
+												}
+											}
+										}
+									]
+								}
+								#mat
+								Transform {
+									translation	0.5 2.8 0.9
+									children [
+										Shape {
+											geometry Sphere { radius	0.2}
+											appearance Appearance {
+												material Material {
+													ambientIntensity 0
+													diffuseColor 0 0 0
+													specularColor .29 .3 .29
+													shininess .08
+												}
+											}
+										}
+									]
+								}
+								Transform {
+									translation	-0.5 2.8 0.9
+									children [
+										Shape {
+											geometry Sphere { radius	0.2}
+											appearance Appearance {
+												material Material {
+													ambientIntensity 0
+													diffuseColor 0 0 0
+													specularColor .29 .3 .29
+													shininess .08
+												}
+											}
+										}
+									]
+								}
+								#mieng
+								Transform {
+									translation	0 2 0.8
+									scale 3 1 1
+									children [
+										Shape {
+											geometry Sphere { radius	0.1}
+											appearance Appearance {
+												material Material {
+													ambientIntensity .0833
+													diffuseColor .996 0 0
+													shininess .08
+												}
+											}
+										}
+									]
+								}
+								#mui
+								Transform {
+									translation	0 2.5 1
+									scale 1 3 1
+									children [
+										Shape {
+											geometry Sphere { radius	0.1}
+											appearance Appearance {
+												material Material {
+													ambientIntensity 0
+												}
+											}
+										}
+									]
+								}
+								#dai dau
+								Transform {
+									translation	0 3.3 0
+									scale 0.8 1 0.8
+									children [
+										Shape {
+											geometry Cylinder {
+												height 0.5
+												radius 1.5
+												bottom FALSE
+												top	FALSE
+												side TRUE
+											}
+											appearance Appearance {
+												material Material {
+													diffuseColor .79 .25 0
+													specularColor .63 .19 .03
+													ambientIntensity .0867
+													shininess .55
+												}
+											}
+										}
+									]
+								}
+								Transform {
+									translation	1.2 2.8 0
+									children [
+										Shape {
+											geometry Box {size 0 1.5 0.3}
+											appearance Appearance {
+												material Material {
+													diffuseColor .79 .25 0
+													specularColor .63 .19 .03
+													ambientIntensity .0867
+													shininess .55
+												}
+											}
+										}
+									]
+								}
+								#tai
+								Transform {
+									translation	1.1 2.8 0
+									scale 1 3 1
+									children [
+										DEF taitrai Shape {
+											geometry Sphere { radius	0.1}
+											appearance Appearance {
+												material Material {
+													ambientIntensity 0
+												}
+											}
+										}
+									]
+								}
+								DEF	taiphai Transform {
+									translation	-1.1 2.8 0
+									scale 1 3 1
+									children USE taitrai
+								}
+								#co
+								Transform  {
+									translation 0 1 0  
+									children [
+										Shape {
+											appearance	Appearance {
+												material Material {
+													ambientIntensity 0
+												}
+											}
+											geometry Extrusion {
+												crossSection [
+													2.00	0.00
+													1.85	0.77
+													1.41	1.41
+													0.77	1.85
+													0.00	2.00
+													-0.77	1.85
+													-1.41	1.41
+													-1.85	0.77
+													-2.00	0.00
+													-1.85	-0.77
+													-1.41	-1.41
+													-0.77	-1.85
+													0.00	-2.00
+													0.77	-1.85
+													1.41	-1.41
+													1.85	-0.77
+													2.00	0.00
+												]
+												spine [0 0 0,0 0.2 0,0 0.4 0,0 0.7 0]
+												scale [0.4 0.4,0.26 0.26,0.22 0.22,0.21 0.21]
+												creaseAngle	1
+												beginCap TRUE
+												endCap TRUE
+												solid FALSE
+											}
+
+										}
+									]
+								}
+								#than
+								Transform {
+									translation 0 1 0  
+									children [
+										Shape {
+											appearance	Appearance {
+												material Material {
+													ambientIntensity 0
+												}
+											}
+											geometry Extrusion {
+												crossSection [
+													2.00	0.00
+													1.85	0.77
+													1.41	1.41
+													0.77	1.85
+													0.00	2.00
+													-0.77	1.85
+													-1.41	1.41
+													-1.85	0.77
+													-2.00	0.00
+													-1.85	-0.77
+													-1.41	-1.41
+													-0.77	-1.85
+													0.00	-2.00
+													0.77	-1.85
+													1.41	-1.41
+													1.85	-0.77
+													2.00	0.00
+												]
+												spine [0 0 0,0 -0.7 0,0 -1.4 0,0 -1.4 0,0 -4 0]
+												scale [0.4 0.3,1 0.3,1.05 0.3,0.6 0.4,0.6 0.3]
+												creaseAngle	1
+												beginCap TRUE
+												endCap TRUE
+												solid FALSE
+											}
+
+										}
+									]
+								}
+								#ao
+								Transform {
+									translation 0 1 0  
+									children [
+										Shape {
+											appearance	Appearance {
+												material Material {
+													diffuseColor 0 0 0
+													ambientIntensity 0
+													shininess .08
+												}
+											}
+											geometry Extrusion {
+												crossSection [
+													2.00	0.00
+													1.85	0.77
+													1.41	1.41
+													0.77	1.85
+													0.00	2.00
+													-0.77	1.85
+													-1.41	1.41
+													-1.85	0.77
+													-2.00	0.00
+													-1.85	-0.77
+													-1.41	-1.41
+													-0.77	-1.85
+													0.00	-2.00
+													0.77	-1.85
+													1.41	-1.41
+													1.85	-0.77
+													2.00	0.00
+												]
+												spine [0 0 0,0 -0.2 0,0 -0.5 0,0 -1.8 0,0 -4.7 0]
+												scale [0.41 0.42,0.64 0.55,0.65 0.7,0.65 0.6,0.62 0.48]
+												creaseAngle	1
+												beginCap TRUE
+												endCap TRUE
+												solid FALSE
+											}
+
+										}
+									]
+								}
+								Transform {
+									translation	0 -3.1 0
+									scale 1 1 0.8
+									children [
+										Shape {
+											geometry Cylinder {
+												height 0.5
+												radius 1.3
+												bottom FALSE
+												top	FALSE
+												side TRUE
+											}
+											appearance Appearance {
+												material Material {
+													diffuseColor .88 .15 .01
+													ambientIntensity .0833
+													shininess .08
+													specularColor .19 .03 .03
+												}
+											}
+										}
+									]
+								}
+								#quan
+								Transform {
+									translation	0 -5 0
+									scale 1 1 0.8
+									children [
+										Shape {
+											geometry Cylinder {
+												height 4
+												radius 1.2
+												bottom FALSE
+												top	FALSE
+												side TRUE
+											}
+											appearance Appearance {
+												material Material {
+													diffuseColor 0 0 0
+													ambientIntensity 0
+													shininess .08
+												}
+											}
+										}
+									]
+								}
+								Transform {
+									translation	0 -6.8 0
+									scale 1 1 0.8
+									children [
+										Shape {
+											geometry Cylinder {
+												height 0.3
+												radius 1.21
+												bottom FALSE
+												top	FALSE
+												side TRUE
+											}
+											appearance Appearance {
+												material Material {
+													diffuseColor .88 .15 .01
+													ambientIntensity .0833
+													shininess .08
+													specularColor .19 .03 .03
+												}
+											}
+										}
+									]
+								}
+								Transform {
+									translation	-1.22 -5 0
+									children [
+										Shape {
+											geometry Box {size 0 4 0.3}
+											appearance Appearance {
+												material Material {
+													diffuseColor .88 .15 .01
+													ambientIntensity .0833
+													shininess .08
+													specularColor .19 .03 .03
+												}
+											}
+										}
+									]
+								}
+							]
+						}
+						#chan phai	   -0.6 -3 0
+						DEF	chanphai Transform {
+							scale 0.9 1 0.9
+							children [
+								Transform {
+									translation	-0.6 -3 0
+									children [
+										Shape {
+											appearance Appearance {
+												material Material {
+													ambientIntensity 0
+												}
+											}
+											geometry Extrusion {
+												crossSection [
+													2.00	0.00
+													1.85	0.77
+													1.41	1.41
+													0.77	1.85
+													0.00	2.00
+													-0.77	1.85
+													-1.41	1.41
+													-1.85	0.77
+													-2.00	0.00
+													-1.85	-0.77
+													-1.41	-1.41
+													-0.77	-1.85
+													0.00	-2.00
+													0.77	-1.85
+													1.41	-1.41
+													1.85	-0.77
+													2.00	0.00
+												]
+												spine [0 0 0,0 -1.4 0,0 -2.4 0,0 -3 0,0 -4.9 0]
+												scale [0.3 0.35,0.27 0.27,0.2 0.2,0.22 0.22,0.16 0.16]
+												creaseAngle	1
+												beginCap TRUE
+												endCap TRUE
+												solid FALSE
+											}
+										}
+									]
+								}
+								#ban chan
+								DEF banchan Transform {
+									translation	-0.6 -7.9 0.28 
+									scale 1.4 0.6 2.5
+									children [
+										Shape {
+											geometry Sphere	{radius 0.25}
+											appearance Appearance {
+												material Material {
+													ambientIntensity 0
+												}
+											}
+										}
+									]
+								}
+							]
+						}
+						#chan trai	   0.6 -3 0
+						DEF	chantrai Transform {
+							translation	1.2 0 0
+							children USE chanphai
+						}
+						#tay phai	  -1.7 0 0
+						DEF	tayphai Transform {
+							scale 0.9 1 0.8
+							children [
+								Transform {
+									translation	-1.8 0 0
+									children [
+										Shape {
+											appearance Appearance {
+												material Material {
+													ambientIntensity 0
+												}
+											}
+											geometry Extrusion {
+												crossSection [
+													2.00	0.00
+													1.85	0.77
+													1.41	1.41
+													0.77	1.85
+													0.00	2.00
+													-0.77	1.85
+													-1.41	1.41
+													-1.85	0.77
+													-2.00	0.00
+													-1.85	-0.77
+													-1.41	-1.41
+													-0.77	-1.85
+													0.00	-2.00
+													0.77	-1.85
+													1.41	-1.41
+													1.85	-0.77
+													2.00	0.00
+												]
+												spine [0 0 0,0 -2 0,0.15 -4 0.15]
+												scale [0.20 0.20,0.16 0.16,0.14 0.14]
+												creaseAngle	1
+												beginCap TRUE
+												endCap TRUE
+												solid FALSE
+											}
+										}
+									]
+								}
+								#ban tay
+								Transform {
+									translation	-1.55 -4.1 0.15
+									scale 0.8 1 0.8
+									children [
+										Shape {
+											geometry Sphere { radius	0.35}
+											appearance Appearance {
+												material Material {
+													ambientIntensity 0
+												}
+											}
+										}
+									]
+								}
+		
+							]
+						}
+						#tay trai	1.7 0 0
+						DEF	taytrai Transform {
+							scale 0.9 1 0.8
+							children [
+								Transform {
+									translation	1.8 0 0
+									children [
+										Shape {
+											appearance Appearance {
+												material Material {
+													ambientIntensity 0
+												}
+											}
+											geometry Extrusion {
+												crossSection [
+													2.00	0.00
+													1.85	0.77
+													1.41	1.41
+													0.77	1.85
+													0.00	2.00
+													-0.77	1.85
+													-1.41	1.41
+													-1.85	0.77
+													-2.00	0.00
+													-1.85	-0.77
+													-1.41	-1.41
+													-0.77	-1.85
+													0.00	-2.00
+													0.77	-1.85
+													1.41	-1.41
+													1.85	-0.77
+													2.00	0.00
+												]
+												spine [0 0 0,0 -2 0,-0.15 -4 0.15]
+												scale [0.20 0.20,0.16 0.16,0.14 0.14]
+												creaseAngle	1
+												beginCap TRUE
+												endCap TRUE
+												solid FALSE
+											}
+										}
+									]
+								}
+								#ban tay
+								Transform {
+									translation	1.55 -4.1 0.15
+									scale 0.8 1 0.8
+									children [
+										Shape {
+											geometry Sphere { radius	0.35}
+											appearance Appearance {
+												material Material {
+													ambientIntensity 0
+												}
+											}
+										}
+									]
+								}
+							]
+						}
+						DEF	touch TouchSensor {
+							enabled	TRUE
+						}
+					]
+				}
+
+				#Thoi gian
+				DEF time TimeSensor {
+					enabled	FALSE
+					cycleInterval 3
+					loop TRUE
+					startTime 0 
+					stopTime 0 
+				}
+
+				DEF	taydichuyen OrientationInterpolator	{
+					key	[0,0.11,0.22,0.33,0.44,0.55,0.66,0.77,0.88,1]
+					keyValue [1 0 0 0,1 0 0 -1.57,1 0 0 -3.1,1 0 0 -1.57,1 0 0 0, -1 0 1 0,-1 0 1 0.35,-1 0 1 0,1 0 1 -0.35,1 0 0 0]
+				}
+				#DEF	taydichuyen OrientationInterpolator	{
+				#	key	[0,0.3,0.6,1]
+				#	keyValue [-1 0 1 0,-1 0 1 0.35,-1 0 1 0,1 0 1 -0.35,1 0 0 0]
+				#}
+
+				DEF	banchandichuyen OrientationInterpolator {
+					key	[0,0.11,0.22,0.33,0.44,0.55,0.66,0.77,0.88,1]
+					keyValue [1 0 0 0,1 0 0 0.3,1 0 0 0.5,1 0 0 0.3,1 0 0 0,1 0 0 0,1 0 0 0,1 0 0 0,1 0 0 0,1 0 0 0]
+				}
+				DEF nguoidichuyen PositionInterpolator {
+					key	[0,0.11,0.22,0.33,0.44,0.55,0.66,0.77,0.88,1]
+					keyValue [0 0 0,0 0.5 0,0 1 0,0 0.5 0,0 0 0,0 0 0,0 0 0,0 0 0,0 0 0,0 0 0]
+				}
+				DEF ma Script {
+					eventIn	SFBool turnOn
+					field SFBool turn FALSE
+					eventOut SFBool	on
+					url	"javascript:
+					function turnOn(val){
+						if(val){
+							turn=!turn;
+							if(turn){
+								on=TRUE;
+							}else{
+								on=FALSE;
+							}
+						}
+					}
+		
+					  "
+				}
+
+			]
+			ROUTE touch.isActive TO	ma.turnOn
+			ROUTE ma.on	TO time.enabled
+			ROUTE touch.touchTime TO time.startTime
+			ROUTE time.fraction_changed	TO taydichuyen.set_fraction
+			ROUTE taydichuyen.value_changed	TO tayphai.rotation
+			ROUTE taydichuyen.value_changed	TO taytrai.rotation
+
+			ROUTE time.fraction_changed	TO banchandichuyen.set_fraction
+			ROUTE banchandichuyen.value_changed	TO banchan.rotation
+
+			ROUTE time.fraction_changed	TO nguoidichuyen.set_fraction
+			ROUTE nguoidichuyen.value_changed TO nu.translation
+		}
+	]
+}

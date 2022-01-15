@@ -1,0 +1,77 @@
+#VRML V2.0 utf8
+DEF gieng Transform {
+	children [
+		Shape { # gieng
+			appearance Appearance {
+				material Material {
+					diffuseColor .753 .298 0
+					specularColor .843 .843 .843
+					emissiveColor .098 .0392 0
+					ambientIntensity .0867
+					shininess .92
+				}
+				texture ImageTexture {
+					url "file:///C:/Users/Duong Doan/Desktop/BTL/Thuctaiao/images/gachda.jpg"
+				}
+				textureTransform TextureTransform {
+					translation -.244 -.244
+					scale 1.95 1.95
+				}
+			}
+			geometry Extrusion {
+				endCap FALSE
+				solid FALSE
+				creaseAngle 1.03
+				spine [
+					0 0 0, 0 3 0, 0 3 0, 0 .2 0
+				]
+				scale [
+					1 1, 1 1, .8 .8, .8 .8
+				]
+				crossSection [
+					1.5 0, 1.477 .26, 1.41 .513, 1.299 .75, 1.149 .964, .964 1.149,
+					.75 1.299, .513 1.41, .26 1.477, 0 1.5, -.26 1.477, -.513 1.41,
+					-.75 1.299, -.964 1.149, -1.149 .964, -1.299 .75, -1.41 .513,
+					-1.477 .26, -1.5 0, -1.477 -.26, -1.41 -.513, -1.299 -.75,
+					-1.149 -.964, -.964 -1.149, -.75 -1.299, -.513 -1.41, -.26 -1.477,
+					0 -1.5, .26 -1.477, .513 -1.41, .75 -1.299, .964 -1.149,
+					1.149 -.964, 1.299 -.75, 1.41 -.513, 1.477 -.26, 1.5 0, 1.477 .26
+				]
+			}
+		}
+		Shape {
+			appearance Appearance {
+				material	Material {
+					diffuseColor .33 .34 .6
+					specularColor .29 .29 .29
+					ambientIntensity .103
+					shininess .79
+					transparency .46
+				}
+			}
+			geometry Extrusion {
+				endCap TRUE
+				beginCap TRUE
+				solid FALSE
+				creaseAngle 1.03
+				spine [
+					0 .2 0, 0 2 0
+				]
+				scale [
+					.81 .81, .81 .81
+				]
+				crossSection [
+					1.5 0, 1.477 .26, 1.41 .513, 1.299 .75, 1.149 .964, .964 1.149,
+					.75 1.299, .513 1.41, .26 1.477, 0 1.5, -.26 1.477, -.513 1.41,
+					-.75 1.299, -.964 1.149, -1.149 .964, -1.299 .75, -1.41 .513,
+					-1.477 .26, -1.5 0, -1.477 -.26, -1.41 -.513, -1.299 -.75,
+					-1.149 -.964, -.964 -1.149, -.75 -1.299, -.513 -1.41, -.26 -1.477,
+					0 -1.5, .26 -1.477, .513 -1.41, .75 -1.299, .964 -1.149,
+					1.149 -.964, 1.299 -.75, 1.41 -.513, 1.477 -.26, 1.5 0, 1.477 .26
+				]	
+			}
+
+		}
+	]
+}
+

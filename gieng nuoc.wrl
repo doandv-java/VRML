@@ -1,0 +1,332 @@
+#VRML V2.0 utf8
+#Gieng nuoc
+
+Viewpoint {
+	position 0 3 15
+}
+
+DEF gieng Transform {
+	children [
+		Shape {
+			appearance Appearance {
+				#Mau nen da
+				texture	ImageTexture {
+					url	"images/gachda.jpg"
+					repeatS	TRUE
+					repeatT	TRUE
+				}
+			}
+			geometry Extrusion {
+				crossSection [
+					2.00	0.00
+					1.85	0.77
+					1.41	1.41
+					0.77	1.85
+					0.00	2.00
+					-0.77	1.85
+					-1.41	1.41
+					-1.85	0.77
+					-2.00	0.00
+					-1.85	-0.77
+					-1.41	-1.41
+					-0.77	-1.85
+					0.00	-2.00
+					0.77	-1.85
+					1.41	-1.41
+					1.85	-0.77
+					2.00	0.00
+				]
+				creaseAngle	1
+				spine [0 0 0,0 3 0,0 3 0,0 0.1 0]
+				scale [1 1,1 1,0.8 0.8,0.8 0.8]
+				beginCap TRUE
+				endCap FALSE
+				solid FALSE
+			}
+		}
+
+		Transform {
+			translation	0 1.1 0
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor .26 .33 1
+							emissiveColor .05 .07 .2
+							ambientIntensity .106
+							shininess .176
+							transparency .047
+						}
+					}
+					geometry Cylinder {	
+					   radius 1.6
+					   height 2
+					   bottom TRUE
+					}
+				}
+
+			]
+		}
+	]
+}
+
+DEF nhagieng Transform {
+	children [
+		Transform {
+			translation	4 4.5 4
+			children [
+				DEF cotgo Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor .51 .17 .06
+							specularColor .53 .53 .53
+							ambientIntensity .06
+							shininess .93
+						}
+					}
+					geometry Cylinder {
+						radius 0.5
+						height 9
+						side TRUE
+						bottom TRUE
+						top	TRUE
+					}
+				}
+			]
+		}
+		Transform {
+			translation	4 4.5 -4
+			children USE cotgo
+		}
+		Transform {
+			translation	-4 4.5 4
+			children USE cotgo
+		}
+		Transform {
+			translation	-4 4.5 -4
+			children USE cotgo
+		}
+
+		DEF matsan Shape {
+			appearance Appearance {
+				texture	ImageTexture {
+					url	"images/gachda.jpg"
+				}
+			}
+			geometry Box {
+				size 10 0.1 10
+			}
+		}
+		Transform {
+			translation	0 9 0
+			children [
+				Shape {
+					appearance Appearance {
+						material	Material {
+							diffuseColor .33 .3 .28
+							specularColor .31 .25 .13
+							ambientIntensity .514
+							shininess .1
+						}
+					}
+					geometry Box {
+						size 13 0.1 12
+					}
+				}
+			]
+		}
+	]
+}
+DEF xonuoc Transform {
+	translation 3 0.1 0
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor .47 .52 .58
+					specularColor 1 1 1
+					ambientIntensity .123
+					shininess .13
+				}
+			}
+			geometry Extrusion {
+				crossSection [
+					1.00	0.00
+					0.92	0.38
+					0.71	0.71
+					0.38	0.92
+					0.00	1.00
+					-0.38	0.92
+					-0.71	0.71
+					-0.92	0.38
+					-1.00	0.00
+					-0.92	-0.38
+					-0.71	-0.71
+					-0.38	-0.92
+					0.00	-1.00
+					0.38	-0.92
+					0.71	-0.71
+					0.92	-0.38
+					1.00	0.00
+				]
+				creaseAngle	1
+				spine [0 0 0,0 1 0,0 1 0,0 0.2 0]
+				scale [0.5 0.5,0.6 0.6,0.55 0.55,0.45,0.45]
+				solid FALSE
+				beginCap TRUE
+				endCap TRUE
+			}
+		}
+	]
+}
+DEF tru_go Transform {
+	children [
+		Transform {
+			translation	-1.9 4 0
+			children [
+				DEF thanhgo Shape {
+					appearance DEF maugo Appearance {
+						material Material {
+
+						}
+						texture	ImageTexture {
+							url	""
+							repeatS	TRUE
+							repeatT	TRUE
+						}
+					}
+					geometry Box {
+						size 0.2 2 0.3
+					}
+				}
+			]
+		}
+
+		Transform {
+			translation	1.9 4 0
+			children USE thanhgo
+		}
+	]
+}
+
+# Truc quay
+DEF quay_go Transform {
+	center  0 4.5 0
+	children [
+		Transform {
+			rotation 0 0 1 1.57
+			translation	0 4.5 0
+			children [
+				DEF trucgo Shape {
+					appearance USE maugo
+					geometry Cylinder {
+						bottom TRUE
+						top	TRUE
+						side TRUE
+						height 6
+						radius 0.1
+					}
+				}
+			]
+		}
+		Transform {
+			translation	2.9 4.9 0
+			children [
+				Shape {
+					appearance USE maugo
+					geometry Box {
+						size 0.05 1.2 0.2
+					}
+				}
+			]
+		}
+		Transform {
+			translation	3.4 5.4 0
+			rotation 0 0 1 1.57
+			scale 1 0.2 1
+			children USE trucgo
+		}
+		DEF	touch TouchSensor {
+			enabled	TRUE
+		}
+		DEF time TimeSensor {
+			enabled	FALSE
+			cycleInterval 5
+			loop TRUE
+			startTime 0
+			stopTime -1
+		}
+		DEF quay_orient OrientationInterpolator	{
+			key[0,0.25,0.5,0.75,1]
+			keyValue [1 0 0 0, 1 0 0 1.57,1 0 0 3.14,1 0 0 4.71,1 0 0 6.28]
+		}
+		DEF ma Script {
+			eventIn	SFBool turnOn
+			eventOut SFBool	On
+			field SFBool turn FALSE
+			url"javascript:
+				function turnOn(val){
+					if(val){
+						turn=!turn;
+						On=turn;
+					}
+				}
+			"
+		}
+	]
+	ROUTE touch.isActive TO ma.turnOn
+	ROUTE ma.On	TO time.enabled
+	ROUTE time.fraction_changed	TO quay_orient.set_fraction
+	ROUTE quay_orient.value_changed TO	quay_go.rotation
+}
+
+# Day
+DEF day Transform {
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor .23 .39 .19
+					specularColor .2 .3 .29
+					ambientIntensity .06
+					shininess .39
+				}
+				texture	ImageTexture {
+
+				}
+			}
+			geometry IndexedLineSet	{
+				coord DEF point_day Coordinate{
+					point	[
+						0 0 0,
+						0 5 0,
+					]
+				}
+				color Color	{
+					color [
+						0 0 1,
+						0 0 1
+					]
+				}
+				colorIndex [
+					0,1
+				]
+				coordIndex [
+					0,1
+				]
+			}
+		}
+	]
+}
+DEF coordinate CoordinateInterpolator {
+	key	[0 ,0.25,0.5,0.75,1]
+	keyValue [
+		0 0 0 0 5 0,
+		0 0 0 0 4 0,
+	    0 0 0 0 3 0,
+	    0 0 0 0 4 0,
+		0 0 0 0 5 0
+	]
+}
+ROUTE time.fraction_changed	TO coordinate.set_fraction
+ROUTE coordinate.value_changed TO point_day.point 

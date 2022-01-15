@@ -1,0 +1,121 @@
+#VRML V2.0 utf8
+
+#Ve tivi
+
+Transform {
+	center 0 0 0
+	children [
+		DEF votivi Transform {
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 0 0 0
+							specularColor .29 .3 .29
+							ambientIntensity 0
+							shininess .08
+						}
+						texture	ImageTexture {
+							url	""
+							repeatS	TRUE
+							repeatT	TRUE
+						}
+					}
+					geometry Extrusion {
+						crossSection [
+						   8 -4.5
+						   8 4.5
+						   -8 4.5
+						   -8 -4.5
+						   8 -4.5
+						]
+						spine [0 0 -0.5,0 0 0,0 0 0.5,0 0 0.5,0 0 0.25]
+						scale [0.8 0.8,1 1,1 1,0.9 0.9,0.9 0.9]
+						beginCap TRUE
+						endCap TRUE
+						solid FALSE
+						creaseAngle	-1
+					}
+				}
+			]
+		}
+
+		Transform {
+			translation	0 0 0.25
+			children [
+				Shape {
+					appearance Appearance {
+						texture	DEF manhinh MovieTexture {
+							url	"sound/demo.mpg"
+							speed 1
+							loop FALSE
+							startTime -1
+							stopTime -1
+						}
+					}
+					geometry Box {
+						size	14.4 8.1 0.2 
+					}
+
+				}
+			]
+		}
+
+		DEF nut Transform {
+			translation	7.7 -4 0.5
+			center 7.7 -4 0.5
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor .88 .15 .01
+							specularColor .19 .03 .03
+							ambientIntensity .0833
+							shininess .08
+						}
+					}
+					geometry Box {
+						size 0.2 0.2 0.01
+					}
+				}
+				DEF nutbam TouchSensor	{
+					enabled	TRUE
+				}
+				DEF ma Script {
+					eventIn SFBool touchOn
+					eventOut SFBool	on
+					field SFBool  turn FALSE
+					url	"javascript:
+					function touchOn(val){
+						if(val){
+							turn=!turn;
+							on=turn;
+						}else{
+							on=FALSE;
+						}
+					}
+					"
+				}
+				Sound {
+					source DEF sound AudioClip {
+						url	"sound/Andree Right Hand - Where U At ft. JC Hung (Official MV).mp3"
+						loop FALSE
+					}
+					spatialize TRUE
+				   intensity 1
+				   minFront 0
+				   maxFront 100
+				   minBack 0
+				   maxBack 100
+				}
+		
+			]
+			ROUTE nutbam.isActive TO ma.touchOn
+			ROUTE ma.on	TO	manhinh.loop
+			ROUTE manhinh.isActive TO sound.loop
+		}
+	]
+}
+
+
+

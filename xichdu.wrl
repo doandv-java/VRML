@@ -1,0 +1,137 @@
+#VRML V2.0 utf8
+
+#Ve xich du
+Viewpoint {
+	position 0 0 20
+}
+DEF view Viewpoint {
+	position 0 0 5
+}
+
+DEF xichdu Transform {
+	center 0 2.5 0
+	children [
+		Transform {
+			rotation 1 0 0 -1.57
+			translation	0 -1.5 0
+			children[
+				Shape {
+					appearance DEF maugo Appearance {
+						texture	ImageTexture {
+							url"images/maugo.jpg"
+						}
+					}
+					geometry Box {
+						size 5 2 0.1
+					}
+				}
+				Transform {
+					translation	2.4 0 0
+					children [
+						DEF daycheo Shape {
+							appearance USE maugo
+							geometry Extrusion {
+								crossSection [
+									-1 0
+									1 0
+									0 4
+									-1 0
+								]
+								spine [0 0 0,0.1 0 0]
+								scale []
+								solid FALSE
+								creaseAngle	2
+								beginCap FALSE
+								endCap FALSE
+
+							}
+						}
+					]
+				}
+				Transform {
+					translation	-2.45 0 0
+					children USE daycheo
+				}
+			]
+		}
+		Transform {
+			scale 0.4 0.4 0.4
+			translation	0 0.15 0.5
+			children [
+				Inline {
+					url"nuxichdu.wrl"
+					bboxCenter 0 0 0
+					bboxSize -1 -1 -1
+				}
+			]
+		}
+	]
+}
+DEF khung Transform {
+	children [
+		Transform {
+			translation	5 0 0
+			children [
+				DEF cotben Shape {
+					appearance USE maugo
+					geometry Box {
+						size 0.5 6 0.5
+					}
+				}
+			]
+		}
+		Transform {
+			translation	-5 0 0
+			children USE cotben
+		}
+
+		Transform {
+			translation	0 2.5 0
+			rotation 0 0 1 1.57
+			children [
+				Shape {
+					appearance USE maugo
+					geometry Cylinder {
+						radius 0.1
+						height 10
+						bottom TRUE
+						top	TRUE
+					}
+				}
+			]
+		}
+		DEF touch TouchSensor	{
+			enabled	TRUE
+		}
+	]
+}
+DEF time TimeSensor {
+	enabled	TRUE
+	cycleInterval 10
+	loop TRUE
+	startTime 0
+	stopTime 0
+}
+DEF orent OrientationInterpolator	{
+	key	[0 ,0.25,0.5,0.75,1]
+	keyValue [1 0 0 0,1 0 0 0.3,1 0 0 -0.6,1 0 0 0.6,1 0 0 0]
+}
+
+DEF ma Script {
+	eventIn	SFBool turnOn
+	eventOut SFBool	on
+	field SFBool turn FALSE
+	url	"javascript:
+	function turnOn(val){
+		if(val){
+			turn=!turn;
+			on=turn;
+		}
+	}	
+	"
+}
+ROUTE time.fraction_changed	TO orent.set_fraction
+ROUTE orent.value_changed TO xichdu.rotation
+
+ROUTE touch.isActive TO	 ma.turnOn
+ROUTE ma.on	TO view.set_bind

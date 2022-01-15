@@ -1,0 +1,662 @@
+#VRML V2.0 utf8
+
+#Khung nhin
+
+Viewpoint {
+	position 0 10 50
+}
+DEF	view Viewpoint {
+	position 0 10 30
+
+}
+
+Transform {
+	children [
+		DEF nha Transform {
+		#	translation	2.5 0 0
+			children [
+				#San nha
+				DEF sannha Transform {
+					children [
+						Transform {
+							children [
+								Transform {
+									translation	-2.5 0 0
+									children [
+										DEF cottran Transform {
+											children [
+												#Cot
+												Transform {
+													translation	0 0 9.5
+													children [
+														DEF cot Shape {
+															appearance DEF maugo Appearance {
+																material Material {
+																	diffuseColor .88 .32 .2
+																	specularColor .82 .28 .28
+																	ambientIntensity .113
+																	shininess .8
+																}
+																texture	ImageTexture {
+																	url	"file:///C:/Users/Duong Doan/Desktop/BTL/Thuctaiao/images/maugolim.jpg"
+																	repeatS	TRUE
+																	repeatT	TRUE
+																}
+															}
+															geometry Cylinder {
+																radius 0.5
+																height 5
+																bottom TRUE
+																top	TRUE
+																side TRUE
+															}
+														}
+													]
+												}
+												Transform {
+													translation	0 0 -9.5
+													children USE cot
+
+												}
+												Transform {
+													translation	0 2.25 0
+													children [
+														Shape {
+															appearance USE maugo
+															geometry Box{
+																size 0.2 0.5 22
+															}
+
+														}
+													]
+												}
+											]
+										}
+										Transform {
+											translation	5 0 0
+											children USE cottran
+										}
+										Transform {
+											translation	10 0 0
+											children USE cottran
+
+										}
+										Transform {
+											translation	15 0 0
+											children USE cottran
+										}
+
+										Transform {
+											translation	-5 0 0
+											children USE cottran
+										}
+										Transform {
+											translation	-10 0 0
+											children USE cottran 	
+										}
+		
+									]
+								}
+								Transform {
+									translation	0 2.5 0
+									children [
+										Shape {
+											appearance USE maugo
+											geometry Box{
+												size 27 0.2 22
+											}
+										}
+									]
+								}
+							]
+						}
+
+						Transform {
+							translation	2.5 0 15
+							children[
+								DEF cotsannha Transform {
+									children [
+										USE cot
+										Transform {
+											translation	 0 2.25 -2.5
+											children [
+												Shape {
+													appearance USE maugo
+													geometry Box{
+														size 0.2 0.5 5
+													}
+												}
+											]
+										}
+									]
+								}
+							] 
+						}
+						Transform {
+							translation	-2.5 0 15
+							children USE cotsannha 
+						}
+						Transform {
+							translation	0 2.5 13.5
+							children [
+								Shape {
+									appearance USE maugo
+									geometry Box{
+										size 7 0.2 5
+									}
+								}
+							]
+						}
+						#Thang nha
+						Transform {
+							translation	2 2.5 15.2
+							children [
+								Inline {
+									url	"thangnhasan.wrl"
+									bboxCenter 0 0 0
+									bboxSize -1 -1 -1
+								}
+							]
+						}
+					]
+				}
+
+				#Khung nha
+
+				DEF khungnha Transform {
+					children [
+						Transform {
+							translation	12.5 10 9.5
+							children [
+								DEF cotnha Shape {
+									appearance USE maugo
+									geometry Cylinder {
+										radius 0.5 
+										height 15
+										top	TRUE
+									}
+								}
+							]	
+						}
+						Transform {
+							translation	12.5 10 -9.5
+							children USE cotnha
+						}
+						Transform {
+							translation	-12.5 10 9.5
+							children USE cotnha
+						}
+						Transform {
+							translation	-12.5 10 -9.5
+							children USE cotnha
+						}
+						Transform {
+							translation	2.5 10 9.5
+							children USE cotnha
+						}
+						Transform {
+							translation	-2.5 10 9.5
+							children USE cotnha
+	
+						}
+						Transform {
+							translation	-2.5 10 15
+							children USE cotnha
+						}
+
+						Transform {
+							translation	2.5 10 15
+							children USE cotnha
+						}
+					]
+				}
+
+				#Xa nha
+				DEF khungxanha Transform {
+					children [
+						Transform {
+							translation	12.5 17 0
+							children [
+								DEF xanha Shape {
+									appearance USE maugo
+									geometry Box{
+										size 0.5 1 20
+									}
+								}
+		
+							]
+						}
+
+						Transform {
+							translation	-12.5 17 0
+							children USE xanha
+						}
+						Transform {
+							scale 1 1 1.7
+							translation	0 17 -9.5
+							rotation 0 1 0 1.57
+							children USE xanha
+						}
+						Transform {
+							scale 1 1 1.7
+							translation	0 17 9.5
+							rotation 0 1 0 1.57
+							children USE xanha
+						}
+						Transform {
+							scale 1 1 1.4
+							translation	2.5 17 4.8
+							children USE xanha
+						}
+						Transform {
+							scale 1 1 1.4
+							translation	-2.5 17 4.8
+							children USE xanha
+						}
+		
+						Transform {
+							scale 1 1 0.25
+							rotation 0 1 0 1.57
+							translation	0 17 18.5
+							children USE xanha
+						}
+
+						#Tamgiac mai nha
+						Transform {
+							scale 1 1 0.75
+							rotation 1 0 0 0.85
+							translation	 12.5 22.5 4.5
+							children USE xanha
+						}
+						Transform {
+							scale 1 1 0.75
+							rotation 1 0 0 -0.85
+							translation	 12.5 22.5 -4.5
+							children USE xanha
+						}
+						Transform {
+							scale 1 1 0.75
+							rotation 1 0 0 0.85
+							translation	 -12.5 22.5 4.5
+							children USE xanha	
+						}
+						Transform {
+							scale 1 1 0.75
+							rotation 1 0 0 -0.85
+							translation	 -12.5 22.5 -4.5
+							children USE xanha	
+						}
+						#Cot mai nha
+						Transform {
+							scale 1 1 1.7
+							translation	0 28 0
+							rotation 0 1 0 1.57
+							children USE xanha
+						}
+						# 2 gia dang truoc nha
+						Transform {
+							rotation 1 0 0 -0.86
+							translation 2.5 15 17
+							scale 0.5 1 0.25
+							children USE xanha
+						}
+						Transform {
+							rotation 1 0 0 -0.86
+							translation -2.5 15 17
+							scale 0.5 1 0.25
+							children USE xanha
+						}
+						# 2 Gia ben phai
+						Transform {
+							translation	14.5 15.5 9.5
+							children [
+								DEF giaphai Transform {
+									rotation 0 1 0 1.57
+									children [
+										Transform {
+											rotation 1 0 0 -0.6
+											scale 0.5 1 0.2
+											children USE xanha
+
+										}
+									]
+								}
+							]
+						}
+						Transform {
+							translation	14.5 15.5 -9.5
+							children USE giaphai
+		
+						}
+						#2 gia ben trai
+						Transform {
+							translation	-14.5 15.5 9.5
+							children [
+								DEF giatrai Transform {
+									rotation 0 1 0 1.57
+									children [
+										Transform {
+											rotation 1 0 0 0.6
+											scale 0.5 1 0.2
+											children USE xanha
+
+										}
+									]
+								}
+							]
+						}
+						Transform {
+							translation	-14.5 15.5 -9.5
+							children USE giatrai
+		
+						}
+					]
+				}
+
+				#Xay dung matben mat sau
+				Transform {
+					rotation 0 1 0 1.57
+					translation	13 10 0
+					children [
+						DEF matben Shape {
+							 appearance DEF mautre Appearance {
+								texture	ImageTexture {
+									url"images/74390305_406756180006687_7031378925506789376_n.jpg"
+									repeatS	TRUE
+									repeatT	TRUE
+								}
+							}
+
+							geometry Box {
+								size 20 15 0.2
+							}
+						}
+					]
+				}
+				Transform {
+					rotation 0 1 0 1.57
+					translation	-13 10 0
+					children USE matben
+				}
+				Transform {
+					scale 1.3 1 1
+					translation	0 10 -10
+					children USE matben
+				}
+				#mat truoc
+				Transform {
+					translation	-7.75 10 10
+					children[
+						Shape {
+							appearance USE mautre
+							geometry Box {
+								size 10.5 15 0.2
+							}
+						}
+					]
+				}
+				Transform {
+				  translation 7.75 10 10
+					children[
+						Shape {
+							appearance USE mautre
+							geometry Box {
+								size 10.5 15 0.2
+							}
+						}
+					]
+
+				}
+
+				#Ve mai
+
+				Transform {
+					rotation 1 0 0 -0.74
+					translation	 0 23.3 5
+					children [
+						DEF maitruoc Shape {
+							appearance DEF maurom Appearance {
+			
+								texture	ImageTexture {
+									url	"images/mauromra.png"
+									repeatS	TRUE
+									repeatT	TRUE
+								}
+							}
+							geometry Box{
+								size 34 15.2 0.25
+							}
+						}
+					]	
+				}
+				Transform {
+					rotation 1 0 0  0.74
+					translation	 0 23.3 -5
+					children USE	maitruoc
+				}
+				#Ve mai tam giac bang etrusion
+
+				Transform {
+					translation	0 21 7
+					children [
+						Shape {
+							appearance USE maurom
+							geometry Extrusion {
+								beginCap FALSE
+								endCap FALSE
+								solid FALSE
+								crossSection [
+									-2.75 3.5
+									0 0
+									2.75 3.5
+								]
+								spine [ 0 0 0,0 0 3.2,0 0 13]
+								scale[0 0,1 1,1 1]
+								creaseAngle	-1
+							}
+						}
+					]
+				}
+				#Mat tam giac ben hien nha
+				Transform {
+					translation	0 21 18.5
+					children [
+						Shape {
+							appearance USE maurom
+							geometry	Extrusion	{ 
+								beginCap TRUE
+								endCap TRUE
+								solid FALSE
+								crossSection [
+								  -2.74 3.5
+									0 0
+									2.74 3.5		
+								]
+								spine [ 0 0 0,0 0 0.2]
+								scale[1 1,1 1]
+			
+							}	
+
+						}
+					]
+				}
+				#Tam giac mat ben
+				Transform {
+					translation	-13 28 0
+					rotation 0 1 0 1.57
+					children [
+						DEF matbentamgiac Shape {
+							appearance USE maurom
+							geometry Extrusion {
+								crossSection[
+									-10 11 
+									0 0
+									10 11
+									-10  11
+								]
+								beginCap TRUE
+								endCap FALSE
+								spine [0 0 0,0 0 0.2]
+								scale [1 1,1 1]
+								solid FALSE
+							}
+
+						}
+					]
+				}
+				Transform {
+					translation	13 28 0
+					rotation 0 1 0 1.57
+					children USE matbentamgiac
+				}
+
+				#mai ben bang rom
+
+				Transform {
+					translation	-15 20.5  0
+					rotation 0 0 1 -0.6
+					children [
+						DEF matbenrom Transform {
+							rotation 1 0 0 -1.57
+							children [
+								Shape {
+									appearance USE maurom
+									geometry Extrusion {
+										crossSection [
+											-5 3
+											-9.5 -3
+											-9.5 -5
+											9.5 -5
+											9.5 -3
+											5 3
+											-5 3
+										]
+										spine [0 0 0,0.5 0 0]
+										scale [1 1,1 1]
+										solid FALSE
+									}
+
+								}
+							]
+						}
+					]
+				}
+				Transform {
+					translation	15.2 20.5  0
+					rotation 0 0 1 0.6
+					children USE matbenrom
+				}
+		
+				DEF cuamo Transform {
+				translation	-2.5 9.5 10
+					children [
+						Transform {
+							translation 2.5 0 0
+							children [
+								Shape { 
+									appearance USE maugo
+									geometry Box {
+										size 5 13.5 0.5
+									}
+								}
+								DEF cylinder CylinderSensor {
+
+									enabled TRUE
+									offset 0
+									autoOffset TRUE
+
+									maxAngle 0
+
+									minAngle -3.14
+
+									diskAngle 0.262
+
+								}
+							]
+							ROUTE cylinder.rotation_changed	TO cuamo.rotation
+
+						}
+				
+					]
+			
+				}
+		
+
+		
+			]
+		}
+		Transform {
+			translation	-6 9 -9.5 
+			scale 2 2 2
+			children [
+				Inline {
+					url	"TV.wrl"
+					bboxCenter 0 0 0
+					bboxSize -1 -1 -1
+				}
+			]
+		}
+
+		Transform {
+			translation	0 2.5 0 
+			children [
+				Inline {
+					url	"banghe.wrl"
+					bboxCenter 0 0 0
+					bboxSize -1 -1 -1
+				}
+			]
+		}
+		Transform{
+			translation	20 -2.5 0
+			scale 1.5 4 1.5
+			children [
+				Inline {
+					url	"buichuoi.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	10 3.2 0
+			scale 0.6 0.6 0.6
+			children [
+				Inline {
+					url	"guongngu.wrl"
+
+				}
+			]
+		}
+		DEF touch TouchSensor	{
+			enabled	TRUE
+		}
+	]
+}
+DEF ma Script {
+	eventIn	SFBool turnOn
+	eventOut SFBool	on
+	field SFBool turn FALSE
+	url	"javascript:
+	function turnOn(val){
+		if(val){
+			turn=!turn;
+			on=turn;
+		}
+	}	
+	"
+}
+ROUTE touch.isActive TO	ma.turnOn
+ROUTE ma.on	TO	view.set_bind
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

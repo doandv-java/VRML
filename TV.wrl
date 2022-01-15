@@ -1,0 +1,151 @@
+#VRML V2.0 utf8
+
+Transform {
+	rotation 1 0 0 1.57
+	children [
+
+		DEF voTV Transform {
+			children [
+				Shape { 
+					appearance Appearance {
+						material Material {
+							diffuseColor 0 0 0
+							specularColor .29 .298 .29
+							ambientIntensity 0
+							shininess .08
+						}
+					}
+					geometry Extrusion {
+						creaseAngle .279
+						spine [
+							0 0 0, 0 .3 0, 0 .6 0, 0 .6 0, 0 .59 0
+						]
+						scale [
+							.4 .4, 1 1, 1 1, .9 .9, .9 .9
+						]
+					}
+				}
+			]
+		}
+		DEF manhinh Transform {
+			translation	0 0.45 0
+			children [
+				Transform {
+					scale 1 0.9 0.9
+					rotation 1 0 0 3.14
+					children [
+						Transform {
+							children [
+								Shape {
+									appearance Appearance {
+										texture	MovieTexture {
+											loop TRUE
+											speed 1
+											startTime 0
+											url	"sound/demo.mpg"
+										}
+									}
+									geometry Extrusion {
+										spine [
+											0 0 0, 0 .1 0
+										]
+										scale [
+											.9 1, .9 .9
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+		DEF nutbam Transform {
+			translation	0.95 0.6 0.8
+			scale 0.2 0.2 0.2
+			children [
+				Shape { 
+					appearance Appearance {
+						material Material {
+							diffuseColor .227 .388 .188
+							specularColor .2 .298 .29
+							ambientIntensity .06
+							shininess .39
+						}
+					}
+					geometry Extrusion {
+						spine [
+							0 0 0, 0 .1 0
+						]
+						scale .2 .2
+					}
+				}
+			]
+		}
+
+		DEF touch TouchSensor	{
+			enabled	TRUE
+		}
+		DEF tat PositionInterpolator {
+			key	[0,0.1]
+			keyValue [0 0.6 0,0 0.45 0]
+
+		}
+		DEF	bat PositionInterpolator {
+			key	[0,0.1]
+			keyValue [0 0.45 0,0 0.6 0]
+		}
+		DEF time_bat TimeSensor {
+			loop FALSE
+			cycleInterval 2
+			enabled	FALSE
+			startTime 0
+		}
+		DEF	time_tat TimeSensor	{
+			loop FALSE
+			cycleInterval 2
+			enabled	FALSE
+			startTime 0
+		}
+
+		DEF ma Script {
+			eventIn	SFBool turnOn
+			eventOut SFBool	tat
+			eventOut SFBool	bat
+			field SFBool turn FALSE
+			url	"javascript:
+			function turnOn(val){
+				if(val){
+					turn=!turn;
+					if(turn){
+						bat=TRUE;
+						tat=FALSE;
+					}
+					else{
+						bat=FALSE;
+						tat=TRUE;
+
+					}
+				}
+			}
+	
+			"
+		}
+	]
+
+#Route 
+ROUTE touch.isActive TO	ma.turnOn
+ROUTE touch.touchTime TO time_bat.startTime
+ROUTE touch.touchTime TO time_tat.startTime
+ROUTE ma.bat TO	time_bat.enabled
+ROUTE time_bat.fraction_changed	TO bat.set_fraction
+ROUTE bat.value_changed	TO manhinh.translation
+ROUTE ma.tat TO	time_tat.enabled
+ROUTE time_tat.fraction_changed	TO tat.set_fraction
+ROUTE tat.value_changed	TO manhinh.translation
+
+}
+
+
+
+

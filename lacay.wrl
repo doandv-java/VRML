@@ -1,0 +1,85 @@
+#VRML V2.0 utf8
+
+DEF	lacay Transform {
+	rotation 0 1 0 0.785
+	children [
+	DEF	la Transform	{
+				children [
+					Shape {
+						appearance Appearance {
+							material Material {
+								diffuseColor .53 .82 .02
+								specularColor .04 .1 0
+								emissiveColor .06 .1 0
+								ambientIntensity .11
+								shininess .08
+							}
+						}
+						geometry Extrusion {
+							crossSection [
+								1	0
+								0.98	0.19
+								0.92	0.38
+								0.83	0.56
+								0.71	0.71
+								0.56	0.83
+								0.38	0.92
+								0.20	0.98
+								0.00	1.00
+								-0.19	0.98
+								-0.38	0.92
+								-0.55	0.83
+								-0.71	0.71
+								-0.83	0.56
+								-0.92	0.38
+								-0.98	0.20
+								-1.00	0.00
+								-0.98	-0.19
+								-0.92	-0.38
+								-0.83	-0.55
+								-0.71	-0.71
+								-0.56	-0.83
+								-0.38	-0.92
+								-0.20	-0.98
+								0.00	-1.00
+								0.19	-0.98
+								0.38	-0.92
+								0.55	-0.83
+								0.71	-0.71
+								0.83	-0.56
+								0.92	-0.39
+								0.98	-0.20
+								1.00	0.00
+							]
+							spine [0 0 0,0 0.1 0,0 0.2 0,0 0.3 0,0 0.4 0,0 0.5 0,0 0.6 0]
+							scale [0.01 0.01,0.075 0.01,0.15 0.01,0.2 0.01,0.15 0.01,0.075 0.01,0 0]
+							creaseAngle	1
+    						beginCap  TRUE
+    						endCap    TRUE
+    						solid   FALSE
+						}
+			
+					}
+				]
+			}
+
+			DEF	la1 Transform {
+				rotation 1 0 0 0.785
+				children [
+					USE	la
+				]
+			}
+			DEF	la2	Transform {
+				rotation 1 0 0 -0.782
+				children [
+					USE	la
+				]
+			}
+			DEF	la3	Transform {
+				rotation 0 1 0 1.57
+				children [
+					USE	la1
+				]
+			}
+		]
+	}
